@@ -97,8 +97,9 @@ class SignupPage:
         # self.driver.find_element(*self.create_account_button).click()
 
     def account_information_text_visibility(self):
-        wait=WebDriverWait(self.driver,10)
-        return wait.until(EC.presence_of_element_located(self.account_information_text)).is_displayed()
+        return WebDriverWait(self.driver,10).until(EC.visibility_of_element_located(self.account_information_text)).is_displayed()
+        # wait=WebDriverWait(self.driver,10)
+        # return wait.until(EC.presence_of_element_located(self.account_information_text)).is_displayed()
 
     def account_created_text_visibility(self):
         wait=WebDriverWait(self.driver,10)

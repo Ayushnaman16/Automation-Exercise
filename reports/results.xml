@@ -1,25 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="59" time="1005.680" timestamp="2026-03-24T03:02:15.940992" hostname="LAPTOP-IBH169SJ"><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_001" time="14.220" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_002" time="25.499"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0x3ccdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0x3ccf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x1b2120]&#10;&#09;chromedriver!(No symbol) [0x1fabca]&#10;&#09;chromedriver!(No symbol) [0x1fae6b]&#10;&#09;chromedriver!(No symbol) [0x23d0b2]&#10;&#09;chromedriver!(No symbol) [0x21db54]&#10;&#09;chromedriver!(No symbol) [0x23a9a5]&#10;&#09;chromedriver!(No symbol) [0x21d8a6]&#10;&#09;chromedriver!(No symbol) [0x1f0229]&#10;&#09;chromedriver!(No symbol) [0x1f0fe4]&#10;&#09;chromedriver!GetHandleVerifier [0x6348b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0x62feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0x64e06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0x3e5cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3ed9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0x3d58c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3d5a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0x3bee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x75755d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]&#10;&#09;(No symbol) [(nil)]">self = &lt;tests.test_file1.TestFile1 object at 0x0000023DE2659010&gt;
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="8" skipped="0" tests="59" time="1040.776" timestamp="2026-03-28T20:49:12.309174" hostname="LAPTOP-IBH169SJ"><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_001" time="13.701" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_002" time="24.381"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0xa2cdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0xa2cf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x812120]&#10;&#09;chromedriver!(No symbol) [0x85abca]&#10;&#09;chromedriver!(No symbol) [0x85ae6b]&#10;&#09;chromedriver!(No symbol) [0x89d0b2]&#10;&#09;chromedriver!(No symbol) [0x87db54]&#10;&#09;chromedriver!(No symbol) [0x89a9a5]&#10;&#09;chromedriver!(No symbol) [0x87d8a6]&#10;&#09;chromedriver!(No symbol) [0x850229]&#10;&#09;chromedriver!(No symbol) [0x850fe4]&#10;&#09;chromedriver!GetHandleVerifier [0xc948b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0xc8feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0xcae06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0xa45cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa4d9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0xa358c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa35a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0xa1ee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x74e85d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]">self = &lt;tests.test_file1.TestFile1 object at 0x000002961FEA3320&gt;
 
     def test_AE_REG_002(self):
         hp=HomePage(self.driver)
         lp=LoginPage(self.driver)
         sp=SignupPage(self.driver)
     
+        self.logger.info('Clicking on the Login/Signup button in REG_002.')
         hp.click_login_signup_button()
     
+        self.logger.info('Entering the signup details.')
         lp.enter_signup_details("hmm","hmm69@gmail.com")
         lp.click_signup_button()
     
+        self.logger.info('Account information text is displayed.')
 &gt;       assert sp.account_information_text_visibility()==True
 
-tests\test_file1.py:49: 
+tests\test_file1.py:59: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 pages\SignupPage.py:101: in account_information_text_visibility
     return wait.until(EC.presence_of_element_located(self.account_information_text)).is_displayed()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="359f7cde784f7b65864c76752f15a9fc")&gt;
-method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x0000023DE30C7060&gt;
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="fd2994728b5ca992b6b002cb0ab54d3a")&gt;
+method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x00000296201E6C00&gt;
 message = ''
 
     def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
@@ -76,52 +79,55 @@ message = ''
 &gt;       raise TimeoutException(message, screen, stacktrace)
 E       selenium.common.exceptions.TimeoutException: Message: 
 E       Stacktrace:
-E       	chromedriver!GetHandleVerifier [0x3ccdf3+10b03]
-E       	chromedriver!GetHandleVerifier [0x3ccf24+10c34]
-E       	chromedriver!(No symbol) [0x1b2120]
-E       	chromedriver!(No symbol) [0x1fabca]
-E       	chromedriver!(No symbol) [0x1fae6b]
-E       	chromedriver!(No symbol) [0x23d0b2]
-E       	chromedriver!(No symbol) [0x21db54]
-E       	chromedriver!(No symbol) [0x23a9a5]
-E       	chromedriver!(No symbol) [0x21d8a6]
-E       	chromedriver!(No symbol) [0x1f0229]
-E       	chromedriver!(No symbol) [0x1f0fe4]
-E       	chromedriver!GetHandleVerifier [0x6348b9+2785c9]
-E       	chromedriver!GetHandleVerifier [0x62feb5+273bc5]
-E       	chromedriver!GetHandleVerifier [0x64e06b+291d7b]
-E       	chromedriver!GetHandleVerifier [0x3e5cc8+299d8]
-E       	chromedriver!GetHandleVerifier [0x3ed9fd+3170d]
-E       	chromedriver!GetHandleVerifier [0x3d58c8+195d8]
-E       	chromedriver!GetHandleVerifier [0x3d5a92+197a2]
-E       	chromedriver!GetHandleVerifier [0x3bee9a+2baa]
-E       	KERNEL32!BaseThreadInitThunk [0x75755d49+19]
-E       	ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]
-E       	ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]
-E       	(No symbol) [(nil)]
+E       	chromedriver!GetHandleVerifier [0xa2cdf3+10b03]
+E       	chromedriver!GetHandleVerifier [0xa2cf24+10c34]
+E       	chromedriver!(No symbol) [0x812120]
+E       	chromedriver!(No symbol) [0x85abca]
+E       	chromedriver!(No symbol) [0x85ae6b]
+E       	chromedriver!(No symbol) [0x89d0b2]
+E       	chromedriver!(No symbol) [0x87db54]
+E       	chromedriver!(No symbol) [0x89a9a5]
+E       	chromedriver!(No symbol) [0x87d8a6]
+E       	chromedriver!(No symbol) [0x850229]
+E       	chromedriver!(No symbol) [0x850fe4]
+E       	chromedriver!GetHandleVerifier [0xc948b9+2785c9]
+E       	chromedriver!GetHandleVerifier [0xc8feb5+273bc5]
+E       	chromedriver!GetHandleVerifier [0xcae06b+291d7b]
+E       	chromedriver!GetHandleVerifier [0xa45cc8+299d8]
+E       	chromedriver!GetHandleVerifier [0xa4d9fd+3170d]
+E       	chromedriver!GetHandleVerifier [0xa358c8+195d8]
+E       	chromedriver!GetHandleVerifier [0xa35a92+197a2]
+E       	chromedriver!GetHandleVerifier [0xa1ee9a+2baa]
+E       	KERNEL32!BaseThreadInitThunk [0x74e85d49+19]
+E       	ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]
+E       	ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]
 
-D:\Anaconda\Lib\site-packages\selenium\webdriver\support\wait.py:146: TimeoutException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_003" time="15.078" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_004" time="17.834" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_005" time="18.249" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_006" time="25.009"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0x3ccdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0x3ccf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x1b2120]&#10;&#09;chromedriver!(No symbol) [0x1fabca]&#10;&#09;chromedriver!(No symbol) [0x1fae6b]&#10;&#09;chromedriver!(No symbol) [0x23d0b2]&#10;&#09;chromedriver!(No symbol) [0x21db54]&#10;&#09;chromedriver!(No symbol) [0x23a9a5]&#10;&#09;chromedriver!(No symbol) [0x21d8a6]&#10;&#09;chromedriver!(No symbol) [0x1f0229]&#10;&#09;chromedriver!(No symbol) [0x1f0fe4]&#10;&#09;chromedriver!GetHandleVerifier [0x6348b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0x62feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0x64e06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0x3e5cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3ed9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0x3d58c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3d5a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0x3bee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x75755d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]&#10;&#09;(No symbol) [(nil)]">self = &lt;tests.test_file1.TestFile1 object at 0x0000023DE2FF6D50&gt;
+D:\Anaconda\Lib\site-packages\selenium\webdriver\support\wait.py:146: TimeoutException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_003" time="14.292" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_004" time="17.775" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_005" time="17.172" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_006" time="25.600"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0xa2cdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0xa2cf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x812120]&#10;&#09;chromedriver!(No symbol) [0x85abca]&#10;&#09;chromedriver!(No symbol) [0x85ae6b]&#10;&#09;chromedriver!(No symbol) [0x89d0b2]&#10;&#09;chromedriver!(No symbol) [0x87db54]&#10;&#09;chromedriver!(No symbol) [0x89a9a5]&#10;&#09;chromedriver!(No symbol) [0x87d8a6]&#10;&#09;chromedriver!(No symbol) [0x850229]&#10;&#09;chromedriver!(No symbol) [0x850fe4]&#10;&#09;chromedriver!GetHandleVerifier [0xc948b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0xc8feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0xcae06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0xa45cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa4d9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0xa358c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa35a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0xa1ee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x74e85d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]">self = &lt;tests.test_file1.TestFile1 object at 0x000002962016EF00&gt;
 
     def test_AE_REG_006(self):
         hp=HomePage(self.driver)
         lp=LoginPage(self.driver)
         sp=SignupPage(self.driver)
     
+        self.logger.info('Clicking on the Login/Signup button in REG_006.')
         hp.click_login_signup_button()
     
+        self.logger.info('Entering the signup details.')
         lp.enter_signup_details("hmm", "hm69@gmail.com")
+        self.logger.info('Clicking the signup button.')
         lp.click_signup_button()
     
+        self.logger.info('Account information text visibility.')
 &gt;       assert sp.account_information_text_visibility() == True
 
-tests\test_file1.py:141: 
+tests\test_file1.py:177: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 pages\SignupPage.py:101: in account_information_text_visibility
     return wait.until(EC.presence_of_element_located(self.account_information_text)).is_displayed()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="4d7a991fde1cd9202f80c1209cfdabe6")&gt;
-method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x0000023DE353DD00&gt;
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="353b610ddc7336a16ec5635aad483b5b")&gt;
+method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x000002962067AAC0&gt;
 message = ''
 
     def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
@@ -178,52 +184,54 @@ message = ''
 &gt;       raise TimeoutException(message, screen, stacktrace)
 E       selenium.common.exceptions.TimeoutException: Message: 
 E       Stacktrace:
-E       	chromedriver!GetHandleVerifier [0x3ccdf3+10b03]
-E       	chromedriver!GetHandleVerifier [0x3ccf24+10c34]
-E       	chromedriver!(No symbol) [0x1b2120]
-E       	chromedriver!(No symbol) [0x1fabca]
-E       	chromedriver!(No symbol) [0x1fae6b]
-E       	chromedriver!(No symbol) [0x23d0b2]
-E       	chromedriver!(No symbol) [0x21db54]
-E       	chromedriver!(No symbol) [0x23a9a5]
-E       	chromedriver!(No symbol) [0x21d8a6]
-E       	chromedriver!(No symbol) [0x1f0229]
-E       	chromedriver!(No symbol) [0x1f0fe4]
-E       	chromedriver!GetHandleVerifier [0x6348b9+2785c9]
-E       	chromedriver!GetHandleVerifier [0x62feb5+273bc5]
-E       	chromedriver!GetHandleVerifier [0x64e06b+291d7b]
-E       	chromedriver!GetHandleVerifier [0x3e5cc8+299d8]
-E       	chromedriver!GetHandleVerifier [0x3ed9fd+3170d]
-E       	chromedriver!GetHandleVerifier [0x3d58c8+195d8]
-E       	chromedriver!GetHandleVerifier [0x3d5a92+197a2]
-E       	chromedriver!GetHandleVerifier [0x3bee9a+2baa]
-E       	KERNEL32!BaseThreadInitThunk [0x75755d49+19]
-E       	ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]
-E       	ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]
-E       	(No symbol) [(nil)]
+E       	chromedriver!GetHandleVerifier [0xa2cdf3+10b03]
+E       	chromedriver!GetHandleVerifier [0xa2cf24+10c34]
+E       	chromedriver!(No symbol) [0x812120]
+E       	chromedriver!(No symbol) [0x85abca]
+E       	chromedriver!(No symbol) [0x85ae6b]
+E       	chromedriver!(No symbol) [0x89d0b2]
+E       	chromedriver!(No symbol) [0x87db54]
+E       	chromedriver!(No symbol) [0x89a9a5]
+E       	chromedriver!(No symbol) [0x87d8a6]
+E       	chromedriver!(No symbol) [0x850229]
+E       	chromedriver!(No symbol) [0x850fe4]
+E       	chromedriver!GetHandleVerifier [0xc948b9+2785c9]
+E       	chromedriver!GetHandleVerifier [0xc8feb5+273bc5]
+E       	chromedriver!GetHandleVerifier [0xcae06b+291d7b]
+E       	chromedriver!GetHandleVerifier [0xa45cc8+299d8]
+E       	chromedriver!GetHandleVerifier [0xa4d9fd+3170d]
+E       	chromedriver!GetHandleVerifier [0xa358c8+195d8]
+E       	chromedriver!GetHandleVerifier [0xa35a92+197a2]
+E       	chromedriver!GetHandleVerifier [0xa1ee9a+2baa]
+E       	KERNEL32!BaseThreadInitThunk [0x74e85d49+19]
+E       	ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]
+E       	ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]
 
-D:\Anaconda\Lib\site-packages\selenium\webdriver\support\wait.py:146: TimeoutException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_007" time="24.700"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0x3ccdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0x3ccf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x1b2120]&#10;&#09;chromedriver!(No symbol) [0x1fabca]&#10;&#09;chromedriver!(No symbol) [0x1fae6b]&#10;&#09;chromedriver!(No symbol) [0x23d0b2]&#10;&#09;chromedriver!(No symbol) [0x21db54]&#10;&#09;chromedriver!(No symbol) [0x23a9a5]&#10;&#09;chromedriver!(No symbol) [0x21d8a6]&#10;&#09;chromedriver!(No symbol) [0x1f0229]&#10;&#09;chromedriver!(No symbol) [0x1f0fe4]&#10;&#09;chromedriver!GetHandleVerifier [0x6348b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0x62feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0x64e06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0x3e5cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3ed9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0x3d58c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3d5a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0x3bee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x75755d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]&#10;&#09;(No symbol) [(nil)]">self = &lt;tests.test_file1.TestFile1 object at 0x0000023DE2FF6FC0&gt;
+D:\Anaconda\Lib\site-packages\selenium\webdriver\support\wait.py:146: TimeoutException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_007" time="24.510"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0xa2cdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0xa2cf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x812120]&#10;&#09;chromedriver!(No symbol) [0x85abca]&#10;&#09;chromedriver!(No symbol) [0x85ae6b]&#10;&#09;chromedriver!(No symbol) [0x89d0b2]&#10;&#09;chromedriver!(No symbol) [0x87db54]&#10;&#09;chromedriver!(No symbol) [0x89a9a5]&#10;&#09;chromedriver!(No symbol) [0x87d8a6]&#10;&#09;chromedriver!(No symbol) [0x850229]&#10;&#09;chromedriver!(No symbol) [0x850fe4]&#10;&#09;chromedriver!GetHandleVerifier [0xc948b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0xc8feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0xcae06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0xa45cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa4d9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0xa358c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa35a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0xa1ee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x74e85d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]">self = &lt;tests.test_file1.TestFile1 object at 0x000002962016F1A0&gt;
 
     def test_AE_REG_007(self):
         hp = HomePage(self.driver)
         lp = LoginPage(self.driver)
         sp = SignupPage(self.driver)
     
+        self.logger.info('Clicking on the Login/signup button in REG_007.')
         hp.click_login_signup_button()
     
+        self.logger.info('Entering the signup details.')
         lp.enter_signup_details("hmm", "hm69@gmail.com")
+        self.logger.info('Clicking on the signup button.')
         lp.click_signup_button()
     
 &gt;       if sp.account_information_text_visibility():
 
-tests\test_file1.py:166: 
+tests\test_file1.py:207: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 pages\SignupPage.py:101: in account_information_text_visibility
     return wait.until(EC.presence_of_element_located(self.account_information_text)).is_displayed()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="227788d87f5f0c8a42bce8de7674e343")&gt;
-method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x0000023DE353C220&gt;
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="f167c2a0bed0d68532b3045675c4391c")&gt;
+method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x000002962067AD40&gt;
 message = ''
 
     def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
@@ -280,170 +288,88 @@ message = ''
 &gt;       raise TimeoutException(message, screen, stacktrace)
 E       selenium.common.exceptions.TimeoutException: Message: 
 E       Stacktrace:
-E       	chromedriver!GetHandleVerifier [0x3ccdf3+10b03]
-E       	chromedriver!GetHandleVerifier [0x3ccf24+10c34]
-E       	chromedriver!(No symbol) [0x1b2120]
-E       	chromedriver!(No symbol) [0x1fabca]
-E       	chromedriver!(No symbol) [0x1fae6b]
-E       	chromedriver!(No symbol) [0x23d0b2]
-E       	chromedriver!(No symbol) [0x21db54]
-E       	chromedriver!(No symbol) [0x23a9a5]
-E       	chromedriver!(No symbol) [0x21d8a6]
-E       	chromedriver!(No symbol) [0x1f0229]
-E       	chromedriver!(No symbol) [0x1f0fe4]
-E       	chromedriver!GetHandleVerifier [0x6348b9+2785c9]
-E       	chromedriver!GetHandleVerifier [0x62feb5+273bc5]
-E       	chromedriver!GetHandleVerifier [0x64e06b+291d7b]
-E       	chromedriver!GetHandleVerifier [0x3e5cc8+299d8]
-E       	chromedriver!GetHandleVerifier [0x3ed9fd+3170d]
-E       	chromedriver!GetHandleVerifier [0x3d58c8+195d8]
-E       	chromedriver!GetHandleVerifier [0x3d5a92+197a2]
-E       	chromedriver!GetHandleVerifier [0x3bee9a+2baa]
-E       	KERNEL32!BaseThreadInitThunk [0x75755d49+19]
-E       	ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]
-E       	ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]
-E       	(No symbol) [(nil)]
+E       	chromedriver!GetHandleVerifier [0xa2cdf3+10b03]
+E       	chromedriver!GetHandleVerifier [0xa2cf24+10c34]
+E       	chromedriver!(No symbol) [0x812120]
+E       	chromedriver!(No symbol) [0x85abca]
+E       	chromedriver!(No symbol) [0x85ae6b]
+E       	chromedriver!(No symbol) [0x89d0b2]
+E       	chromedriver!(No symbol) [0x87db54]
+E       	chromedriver!(No symbol) [0x89a9a5]
+E       	chromedriver!(No symbol) [0x87d8a6]
+E       	chromedriver!(No symbol) [0x850229]
+E       	chromedriver!(No symbol) [0x850fe4]
+E       	chromedriver!GetHandleVerifier [0xc948b9+2785c9]
+E       	chromedriver!GetHandleVerifier [0xc8feb5+273bc5]
+E       	chromedriver!GetHandleVerifier [0xcae06b+291d7b]
+E       	chromedriver!GetHandleVerifier [0xa45cc8+299d8]
+E       	chromedriver!GetHandleVerifier [0xa4d9fd+3170d]
+E       	chromedriver!GetHandleVerifier [0xa358c8+195d8]
+E       	chromedriver!GetHandleVerifier [0xa35a92+197a2]
+E       	chromedriver!GetHandleVerifier [0xa1ee9a+2baa]
+E       	KERNEL32!BaseThreadInitThunk [0x74e85d49+19]
+E       	ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]
+E       	ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]
 
-D:\Anaconda\Lib\site-packages\selenium\webdriver\support\wait.py:146: TimeoutException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_008" time="25.166"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0x3ccdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0x3ccf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x1b2120]&#10;&#09;chromedriver!(No symbol) [0x1fabca]&#10;&#09;chromedriver!(No symbol) [0x1fae6b]&#10;&#09;chromedriver!(No symbol) [0x23d0b2]&#10;&#09;chromedriver!(No symbol) [0x21db54]&#10;&#09;chromedriver!(No symbol) [0x23a9a5]&#10;&#09;chromedriver!(No symbol) [0x21d8a6]&#10;&#09;chromedriver!(No symbol) [0x1f0229]&#10;&#09;chromedriver!(No symbol) [0x1f0fe4]&#10;&#09;chromedriver!GetHandleVerifier [0x6348b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0x62feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0x64e06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0x3e5cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3ed9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0x3d58c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3d5a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0x3bee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x75755d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]&#10;&#09;(No symbol) [(nil)]">self = &lt;tests.test_file1.TestFile1 object at 0x0000023DE2FF7230&gt;
+D:\Anaconda\Lib\site-packages\selenium\webdriver\support\wait.py:146: TimeoutException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_REG_008" time="13.342"><failure message="TypeError: 'Logger' object is not callable">self = &lt;tests.test_file1.TestFile1 object at 0x000002961FE72900&gt;
 
     def test_AE_REG_008(self):
         hp = HomePage(self.driver)
         lp = LoginPage(self.driver)
         sp = SignupPage(self.driver)
     
+        self.logger.info('Clicking on the Login/Signup button in REG_008.')
         hp.click_login_signup_button()
     
-        lp.enter_signup_details("hmm", "hm69@gmail.com")
-        lp.click_signup_button()
-    
-&gt;       sp.select_newsletter()
+&gt;       self.logger('Entering the signup details.')
+E       TypeError: 'Logger' object is not callable
 
-tests\test_file1.py:184: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-pages\SignupPage.py:89: in select_newsletter
-    WebDriverWait(self.driver,10).until(EC.visibility_of_element_located(self.newsletter)).click()
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-
-self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="12aeaca294f7d70249fd3597ace7f536")&gt;
-method = &lt;function visibility_of_element_located.&lt;locals&gt;._predicate at 0x0000023DE353D3A0&gt;
-message = ''
-
-    def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
-        """Wait until the method returns a value that is not False.
-    
-        Calls the method provided with the driver as an argument until the
-        return value does not evaluate to ``False``.
-    
-        Parameters:
-        ----------
-        method: callable(WebDriver)
-            - A callable object that takes a WebDriver instance as an argument.
-    
-        message: str
-            - Optional message for :exc:`TimeoutException`
-    
-        Return:
-        -------
-        object: T
-            - The result of the last call to `method`
-    
-        Raises:
-        -------
-        TimeoutException
-            - If 'method' does not return a truthy value within the WebDriverWait
-            object's timeout
-    
-        Example:
-        --------
-        &gt;&gt;&gt; from selenium.webdriver.common.by import By
-        &gt;&gt;&gt; from selenium.webdriver.support.ui import WebDriverWait
-        &gt;&gt;&gt; from selenium.webdriver.support import expected_conditions as EC
-    
-        # Wait until an element is visible on the page
-        &gt;&gt;&gt; wait = WebDriverWait(driver, 10)
-        &gt;&gt;&gt; element = wait.until(EC.visibility_of_element_located((By.ID, "exampleId")))
-        &gt;&gt;&gt; print(element.text)
-        """
-        screen = None
-        stacktrace = None
-    
-        end_time = time.monotonic() + self._timeout
-        while True:
-            try:
-                value = method(self._driver)
-                if value:
-                    return value
-            except self._ignored_exceptions as exc:
-                screen = getattr(exc, "screen", None)
-                stacktrace = getattr(exc, "stacktrace", None)
-            if time.monotonic() &gt; end_time:
-                break
-            time.sleep(self._poll)
-&gt;       raise TimeoutException(message, screen, stacktrace)
-E       selenium.common.exceptions.TimeoutException: Message: 
-E       Stacktrace:
-E       	chromedriver!GetHandleVerifier [0x3ccdf3+10b03]
-E       	chromedriver!GetHandleVerifier [0x3ccf24+10c34]
-E       	chromedriver!(No symbol) [0x1b2120]
-E       	chromedriver!(No symbol) [0x1fabca]
-E       	chromedriver!(No symbol) [0x1fae6b]
-E       	chromedriver!(No symbol) [0x23d0b2]
-E       	chromedriver!(No symbol) [0x21db54]
-E       	chromedriver!(No symbol) [0x23a9a5]
-E       	chromedriver!(No symbol) [0x21d8a6]
-E       	chromedriver!(No symbol) [0x1f0229]
-E       	chromedriver!(No symbol) [0x1f0fe4]
-E       	chromedriver!GetHandleVerifier [0x6348b9+2785c9]
-E       	chromedriver!GetHandleVerifier [0x62feb5+273bc5]
-E       	chromedriver!GetHandleVerifier [0x64e06b+291d7b]
-E       	chromedriver!GetHandleVerifier [0x3e5cc8+299d8]
-E       	chromedriver!GetHandleVerifier [0x3ed9fd+3170d]
-E       	chromedriver!GetHandleVerifier [0x3d58c8+195d8]
-E       	chromedriver!GetHandleVerifier [0x3d5a92+197a2]
-E       	chromedriver!GetHandleVerifier [0x3bee9a+2baa]
-E       	KERNEL32!BaseThreadInitThunk [0x75755d49+19]
-E       	ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]
-E       	ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]
-E       	(No symbol) [(nil)]
-
-D:\Anaconda\Lib\site-packages\selenium\webdriver\support\wait.py:146: TimeoutException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_001" time="15.975" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_002" time="14.834" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_003" time="14.160" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_004" time="16.483" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_005" time="17.201" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_006" time="17.488" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_001" time="14.156" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_002" time="14.397" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_003" time="15.692" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_004" time="15.381" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_005" time="16.305" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_006" time="14.549" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_007" time="15.657" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_001" time="16.760" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_002" time="17.915" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_003" time="22.127" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_004" time="19.893" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_005" time="18.045" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_006" time="21.039"><failure message="assert False">self = &lt;tests.test_file1.TestFile1 object at 0x0000023DE30118B0&gt;
+tests\test_file1.py:225: TypeError</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_001" time="21.011" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_002" time="15.017" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_003" time="14.694" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_004" time="19.369" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_005" time="23.031" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_LOGIN_006" time="19.139" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_001" time="13.582" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_002" time="14.600" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_003" time="15.951" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_004" time="15.089" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_005" time="16.452" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_006" time="15.438" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_PROD_007" time="14.947" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_001" time="15.404" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_002" time="19.542" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_003" time="22.961" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_004" time="20.448" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_005" time="22.854" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CART_006" time="26.028"><failure message="assert False">self = &lt;tests.test_file1.TestFile1 object at 0x0000029620198EC0&gt;
 
     def test_AE_CART_006(self):
         hp=HomePage(self.driver)
         pp=ProductsPage(self.driver)
         cp=CartPage(self.driver)
     
+        self.logger.info('Clicking on the product button in CART_006.')
         hp.click_product_button()
     
+        self.logger.info('Adding multiple items to cart and storing the count value.')
         cart_count=pp.add_multiple_quantity_of_a_product(3,'Men Tshirt')
+        self.logger.info('Clicking the cart button.')
         hp.click_cart_button()
     
         total_cart_value=cart_count*pp.get_item_prices('Men Tshirt')
     
         for i in cp.get_cart_total_value():
             if total_cart_value==i:
+                self.logger.info('Total cart value is correct.')
                 update_test_result(self.file,self.sheet,self.row+1,self.col,'pass')
                 assert True
             else:
+                self.logger.info('Total cart value is not matching.')
                 self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_006.png')
                 update_test_result(self.file,self.sheet,self.row+1,self.col,'fail')
 &gt;               assert False
 E               assert False
 
-tests\test_file1.py:571: AssertionError</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_CHECK_001" time="20.545" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CHECK_002" time="18.673" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CHECK_003" time="22.940" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CHECK_004" time="22.019" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CHECK_005" time="25.837" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CONTACT_001" time="14.493" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CONTACT_002" time="15.686" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CONTACT_003" time="14.827"><failure message="selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: File not found : D:\Automation Excercise\testdata\AutomationExercise_60_Detailed_TestCases.xlsx&#10;  (Session info: chrome=146.0.7680.81)&#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0x3ccdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0x3ccf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x1b2120]&#10;&#09;chromedriver!(No symbol) [0x1f563d]&#10;&#09;chromedriver!(No symbol) [0x21db0c]&#10;&#09;chromedriver!(No symbol) [0x1f16e4]&#10;&#09;chromedriver!(No symbol) [0x21dcd4]&#10;&#09;chromedriver!(No symbol) [0x23a9a5]&#10;&#09;chromedriver!(No symbol) [0x21d8a6]&#10;&#09;chromedriver!(No symbol) [0x1f0229]&#10;&#09;chromedriver!(No symbol) [0x1f0fe4]&#10;&#09;chromedriver!GetHandleVerifier [0x6348b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0x62feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0x64e06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0x3e5cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3ed9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0x3d58c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3d5a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0x3bee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x75755d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]&#10;&#09;(No symbol) [(nil)]">self = &lt;tests.test_file1.TestFile1 object at 0x0000023DE3012BA0&gt;
+tests\test_file1.py:716: AssertionError</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_CHECK_001" time="24.541" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CHECK_002" time="18.905" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CHECK_003" time="23.100" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CHECK_004" time="22.405" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CHECK_005" time="25.539" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CONTACT_001" time="14.236" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CONTACT_002" time="15.823" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_CONTACT_003" time="16.742"><failure message="selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: File not found : D:\Automation Excercise\testdata\AutomationExercise_60_Detailed_TestCases.xlsx&#10;  (Session info: chrome=146.0.7680.165)&#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0xa2cdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0xa2cf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x812120]&#10;&#09;chromedriver!(No symbol) [0x85563d]&#10;&#09;chromedriver!(No symbol) [0x87db0c]&#10;&#09;chromedriver!(No symbol) [0x8516e4]&#10;&#09;chromedriver!(No symbol) [0x87dcd4]&#10;&#09;chromedriver!(No symbol) [0x89a9a5]&#10;&#09;chromedriver!(No symbol) [0x87d8a6]&#10;&#09;chromedriver!(No symbol) [0x850229]&#10;&#09;chromedriver!(No symbol) [0x850fe4]&#10;&#09;chromedriver!GetHandleVerifier [0xc948b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0xc8feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0xcae06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0xa45cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa4d9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0xa358c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa35a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0xa1ee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x74e85d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]">self = &lt;tests.test_file1.TestFile1 object at 0x000002962019ADE0&gt;
 
     def test_AE_CONTACT_003(self):
         hp=HomePage(self.driver)
         cup=ContactUsPage(self.driver)
     
+        self.logger.info('Clicking the contact us button in CONTACT_003.')
         hp.click_contact_us_button()
     
         assert cup.contact_us_text_visibility()==True
     
+        self.logger.info('Entering the contact us details.')
         cup.enter_contact_us_details(name='dummy',email='dummy@gmail.com',subject='Testing',message='Testing1')
+        self.logger.info('Uploading the file.')
 &gt;       cup.upload_file_functionality('D:\\Automation Excercise\\testdata\\AutomationExercise_60_Detailed_TestCases.xlsx')
 
-tests\test_file1.py:770: 
+tests\test_file1.py:969: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 pages\ContactUsPage.py:49: in upload_file_functionality
     self.driver.find_element(*self.upload_button).send_keys(file)
@@ -455,8 +381,8 @@ D:\Anaconda\Lib\site-packages\selenium\webdriver\remote\webdriver.py:429: in exe
     self.error_handler.check_response(response)
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x0000023DE37D16D0&gt;
-response = {'status': 400, 'value': '{"value":{"error":"invalid argument","message":"invalid argument: File not found : D:\\\\Aut...ionChain [0x7725d81b+6b]\\n\\tntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]\\n\\t(No symbol) [(nil)]\\n"}}'}
+self = &lt;selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x00000296206AA1B0&gt;
+response = {'status': 400, 'value': '{"value":{"error":"invalid argument","message":"invalid argument: File not found : D:\\\\Aut...ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]\\n\\tntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]\\n"}}'}
 
     def check_response(self, response: Dict[str, Any]) -&gt; None:
         """Checks that a JSON response from the WebDriver does not have an
@@ -548,54 +474,56 @@ response = {'status': 400, 'value': '{"value":{"error":"invalid argument","messa
             raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
 &gt;       raise exception_class(message, screen, stacktrace)
 E       selenium.common.exceptions.InvalidArgumentException: Message: invalid argument: File not found : D:\Automation Excercise\testdata\AutomationExercise_60_Detailed_TestCases.xlsx
-E         (Session info: chrome=146.0.7680.81)
+E         (Session info: chrome=146.0.7680.165)
 E       Stacktrace:
-E       	chromedriver!GetHandleVerifier [0x3ccdf3+10b03]
-E       	chromedriver!GetHandleVerifier [0x3ccf24+10c34]
-E       	chromedriver!(No symbol) [0x1b2120]
-E       	chromedriver!(No symbol) [0x1f563d]
-E       	chromedriver!(No symbol) [0x21db0c]
-E       	chromedriver!(No symbol) [0x1f16e4]
-E       	chromedriver!(No symbol) [0x21dcd4]
-E       	chromedriver!(No symbol) [0x23a9a5]
-E       	chromedriver!(No symbol) [0x21d8a6]
-E       	chromedriver!(No symbol) [0x1f0229]
-E       	chromedriver!(No symbol) [0x1f0fe4]
-E       	chromedriver!GetHandleVerifier [0x6348b9+2785c9]
-E       	chromedriver!GetHandleVerifier [0x62feb5+273bc5]
-E       	chromedriver!GetHandleVerifier [0x64e06b+291d7b]
-E       	chromedriver!GetHandleVerifier [0x3e5cc8+299d8]
-E       	chromedriver!GetHandleVerifier [0x3ed9fd+3170d]
-E       	chromedriver!GetHandleVerifier [0x3d58c8+195d8]
-E       	chromedriver!GetHandleVerifier [0x3d5a92+197a2]
-E       	chromedriver!GetHandleVerifier [0x3bee9a+2baa]
-E       	KERNEL32!BaseThreadInitThunk [0x75755d49+19]
-E       	ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]
-E       	ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]
-E       	(No symbol) [(nil)]
+E       	chromedriver!GetHandleVerifier [0xa2cdf3+10b03]
+E       	chromedriver!GetHandleVerifier [0xa2cf24+10c34]
+E       	chromedriver!(No symbol) [0x812120]
+E       	chromedriver!(No symbol) [0x85563d]
+E       	chromedriver!(No symbol) [0x87db0c]
+E       	chromedriver!(No symbol) [0x8516e4]
+E       	chromedriver!(No symbol) [0x87dcd4]
+E       	chromedriver!(No symbol) [0x89a9a5]
+E       	chromedriver!(No symbol) [0x87d8a6]
+E       	chromedriver!(No symbol) [0x850229]
+E       	chromedriver!(No symbol) [0x850fe4]
+E       	chromedriver!GetHandleVerifier [0xc948b9+2785c9]
+E       	chromedriver!GetHandleVerifier [0xc8feb5+273bc5]
+E       	chromedriver!GetHandleVerifier [0xcae06b+291d7b]
+E       	chromedriver!GetHandleVerifier [0xa45cc8+299d8]
+E       	chromedriver!GetHandleVerifier [0xa4d9fd+3170d]
+E       	chromedriver!GetHandleVerifier [0xa358c8+195d8]
+E       	chromedriver!GetHandleVerifier [0xa35a92+197a2]
+E       	chromedriver!GetHandleVerifier [0xa1ee9a+2baa]
+E       	KERNEL32!BaseThreadInitThunk [0x74e85d49+19]
+E       	ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]
+E       	ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]
 
-D:\Anaconda\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: InvalidArgumentException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_SUB_001" time="13.020" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_SUB_002" time="13.543" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_SUB_003" time="12.924" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_ACC_001" time="24.361"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0x3ccdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0x3ccf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x1b2120]&#10;&#09;chromedriver!(No symbol) [0x1fabca]&#10;&#09;chromedriver!(No symbol) [0x1fae6b]&#10;&#09;chromedriver!(No symbol) [0x23d0b2]&#10;&#09;chromedriver!(No symbol) [0x21db54]&#10;&#09;chromedriver!(No symbol) [0x23a9a5]&#10;&#09;chromedriver!(No symbol) [0x21d8a6]&#10;&#09;chromedriver!(No symbol) [0x1f0229]&#10;&#09;chromedriver!(No symbol) [0x1f0fe4]&#10;&#09;chromedriver!GetHandleVerifier [0x6348b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0x62feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0x64e06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0x3e5cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3ed9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0x3d58c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3d5a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0x3bee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x75755d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]&#10;&#09;(No symbol) [(nil)]">self = &lt;tests.test_file1.TestFile1 object at 0x0000023DE3013560&gt;
+D:\Anaconda\Lib\site-packages\selenium\webdriver\remote\errorhandler.py:232: InvalidArgumentException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_SUB_001" time="13.171" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_SUB_002" time="13.988" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_SUB_003" time="15.516" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_ACC_001" time="27.749"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0xa2cdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0xa2cf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x812120]&#10;&#09;chromedriver!(No symbol) [0x85abca]&#10;&#09;chromedriver!(No symbol) [0x85ae6b]&#10;&#09;chromedriver!(No symbol) [0x89d0b2]&#10;&#09;chromedriver!(No symbol) [0x87db54]&#10;&#09;chromedriver!(No symbol) [0x89a9a5]&#10;&#09;chromedriver!(No symbol) [0x87d8a6]&#10;&#09;chromedriver!(No symbol) [0x850229]&#10;&#09;chromedriver!(No symbol) [0x850fe4]&#10;&#09;chromedriver!GetHandleVerifier [0xc948b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0xc8feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0xcae06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0xa45cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa4d9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0xa358c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa35a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0xa1ee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x74e85d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]">self = &lt;tests.test_file1.TestFile1 object at 0x000002962019B7A0&gt;
 
     def test_AE_ACC_001(self):
         hp=HomePage(self.driver)
         lp=LoginPage(self.driver)
         sp=SignupPage(self.driver)
     
+        self.logger.info('Clicking the Login/Signup button in ACC_001.')
         hp.click_login_signup_button()
     
+        self.logger.info('Entering the signup details.')
         lp.enter_signup_details("hmm", "hmm69@gmail.com")
+        self.logger.info('Clicking the signup button.')
         lp.click_signup_button()
     
 &gt;       assert sp.account_information_text_visibility() == True
 
-tests\test_file1.py:834: 
+tests\test_file1.py:1051: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 pages\SignupPage.py:101: in account_information_text_visibility
     return wait.until(EC.presence_of_element_located(self.account_information_text)).is_displayed()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="772653bc83810cf0d3757fabe543f206")&gt;
-method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x0000023DE358C400&gt;
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="88ae4a2b7c9acfbd263002fe216c9b36")&gt;
+method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x00000296206C0720&gt;
 message = ''
 
     def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
@@ -652,52 +580,54 @@ message = ''
 &gt;       raise TimeoutException(message, screen, stacktrace)
 E       selenium.common.exceptions.TimeoutException: Message: 
 E       Stacktrace:
-E       	chromedriver!GetHandleVerifier [0x3ccdf3+10b03]
-E       	chromedriver!GetHandleVerifier [0x3ccf24+10c34]
-E       	chromedriver!(No symbol) [0x1b2120]
-E       	chromedriver!(No symbol) [0x1fabca]
-E       	chromedriver!(No symbol) [0x1fae6b]
-E       	chromedriver!(No symbol) [0x23d0b2]
-E       	chromedriver!(No symbol) [0x21db54]
-E       	chromedriver!(No symbol) [0x23a9a5]
-E       	chromedriver!(No symbol) [0x21d8a6]
-E       	chromedriver!(No symbol) [0x1f0229]
-E       	chromedriver!(No symbol) [0x1f0fe4]
-E       	chromedriver!GetHandleVerifier [0x6348b9+2785c9]
-E       	chromedriver!GetHandleVerifier [0x62feb5+273bc5]
-E       	chromedriver!GetHandleVerifier [0x64e06b+291d7b]
-E       	chromedriver!GetHandleVerifier [0x3e5cc8+299d8]
-E       	chromedriver!GetHandleVerifier [0x3ed9fd+3170d]
-E       	chromedriver!GetHandleVerifier [0x3d58c8+195d8]
-E       	chromedriver!GetHandleVerifier [0x3d5a92+197a2]
-E       	chromedriver!GetHandleVerifier [0x3bee9a+2baa]
-E       	KERNEL32!BaseThreadInitThunk [0x75755d49+19]
-E       	ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]
-E       	ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]
-E       	(No symbol) [(nil)]
+E       	chromedriver!GetHandleVerifier [0xa2cdf3+10b03]
+E       	chromedriver!GetHandleVerifier [0xa2cf24+10c34]
+E       	chromedriver!(No symbol) [0x812120]
+E       	chromedriver!(No symbol) [0x85abca]
+E       	chromedriver!(No symbol) [0x85ae6b]
+E       	chromedriver!(No symbol) [0x89d0b2]
+E       	chromedriver!(No symbol) [0x87db54]
+E       	chromedriver!(No symbol) [0x89a9a5]
+E       	chromedriver!(No symbol) [0x87d8a6]
+E       	chromedriver!(No symbol) [0x850229]
+E       	chromedriver!(No symbol) [0x850fe4]
+E       	chromedriver!GetHandleVerifier [0xc948b9+2785c9]
+E       	chromedriver!GetHandleVerifier [0xc8feb5+273bc5]
+E       	chromedriver!GetHandleVerifier [0xcae06b+291d7b]
+E       	chromedriver!GetHandleVerifier [0xa45cc8+299d8]
+E       	chromedriver!GetHandleVerifier [0xa4d9fd+3170d]
+E       	chromedriver!GetHandleVerifier [0xa358c8+195d8]
+E       	chromedriver!GetHandleVerifier [0xa35a92+197a2]
+E       	chromedriver!GetHandleVerifier [0xa1ee9a+2baa]
+E       	KERNEL32!BaseThreadInitThunk [0x74e85d49+19]
+E       	ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]
+E       	ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]
 
-D:\Anaconda\Lib\site-packages\selenium\webdriver\support\wait.py:146: TimeoutException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_ACC_002" time="24.605"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0x3ccdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0x3ccf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x1b2120]&#10;&#09;chromedriver!(No symbol) [0x1fabca]&#10;&#09;chromedriver!(No symbol) [0x1fae6b]&#10;&#09;chromedriver!(No symbol) [0x23d0b2]&#10;&#09;chromedriver!(No symbol) [0x21db54]&#10;&#09;chromedriver!(No symbol) [0x23a9a5]&#10;&#09;chromedriver!(No symbol) [0x21d8a6]&#10;&#09;chromedriver!(No symbol) [0x1f0229]&#10;&#09;chromedriver!(No symbol) [0x1f0fe4]&#10;&#09;chromedriver!GetHandleVerifier [0x6348b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0x62feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0x64e06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0x3e5cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3ed9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0x3d58c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0x3d5a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0x3bee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x75755d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]&#10;&#09;(No symbol) [(nil)]">self = &lt;tests.test_file1.TestFile1 object at 0x0000023DE30137D0&gt;
+D:\Anaconda\Lib\site-packages\selenium\webdriver\support\wait.py:146: TimeoutException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_ACC_002" time="24.209"><failure message="selenium.common.exceptions.TimeoutException: Message: &#10;Stacktrace:&#10;&#09;chromedriver!GetHandleVerifier [0xa2cdf3+10b03]&#10;&#09;chromedriver!GetHandleVerifier [0xa2cf24+10c34]&#10;&#09;chromedriver!(No symbol) [0x812120]&#10;&#09;chromedriver!(No symbol) [0x85abca]&#10;&#09;chromedriver!(No symbol) [0x85ae6b]&#10;&#09;chromedriver!(No symbol) [0x89d0b2]&#10;&#09;chromedriver!(No symbol) [0x87db54]&#10;&#09;chromedriver!(No symbol) [0x89a9a5]&#10;&#09;chromedriver!(No symbol) [0x87d8a6]&#10;&#09;chromedriver!(No symbol) [0x850229]&#10;&#09;chromedriver!(No symbol) [0x850fe4]&#10;&#09;chromedriver!GetHandleVerifier [0xc948b9+2785c9]&#10;&#09;chromedriver!GetHandleVerifier [0xc8feb5+273bc5]&#10;&#09;chromedriver!GetHandleVerifier [0xcae06b+291d7b]&#10;&#09;chromedriver!GetHandleVerifier [0xa45cc8+299d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa4d9fd+3170d]&#10;&#09;chromedriver!GetHandleVerifier [0xa358c8+195d8]&#10;&#09;chromedriver!GetHandleVerifier [0xa35a92+197a2]&#10;&#09;chromedriver!GetHandleVerifier [0xa1ee9a+2baa]&#10;&#09;KERNEL32!BaseThreadInitThunk [0x74e85d49+19]&#10;&#09;ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]&#10;&#09;ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]">self = &lt;tests.test_file1.TestFile1 object at 0x000002962019BA10&gt;
 
     def test_AE_ACC_002(self):
         hp=HomePage(self.driver)
         lp=LoginPage(self.driver)
         sp=SignupPage(self.driver)
     
+        self.logger.info('Clicking the Login/signup button in ACC_002.')
         hp.click_login_signup_button()
     
+        self.logger.info('Entering the Signup details.')
         lp.enter_signup_details("hmm", "hmm69@gmail.com")
+        self.logger.info('Clicking the signup button.')
         lp.click_signup_button()
     
 &gt;       assert sp.account_information_text_visibility() == True
 
-tests\test_file1.py:866: 
+tests\test_file1.py:1092: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 pages\SignupPage.py:101: in account_information_text_visibility
     return wait.until(EC.presence_of_element_located(self.account_information_text)).is_displayed()
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="1419e05ee39a8469efb3cc96a45a827c")&gt;
-method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x0000023DE358CB80&gt;
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="2e1ebf50c3acc696bd26c3e4563f17a4")&gt;
+method = &lt;function presence_of_element_located.&lt;locals&gt;._predicate at 0x00000296206C1080&gt;
 message = ''
 
     def until(self, method: Callable[[D], Union[Literal[False], T]], message: str = "") -&gt; T:
@@ -754,28 +684,27 @@ message = ''
 &gt;       raise TimeoutException(message, screen, stacktrace)
 E       selenium.common.exceptions.TimeoutException: Message: 
 E       Stacktrace:
-E       	chromedriver!GetHandleVerifier [0x3ccdf3+10b03]
-E       	chromedriver!GetHandleVerifier [0x3ccf24+10c34]
-E       	chromedriver!(No symbol) [0x1b2120]
-E       	chromedriver!(No symbol) [0x1fabca]
-E       	chromedriver!(No symbol) [0x1fae6b]
-E       	chromedriver!(No symbol) [0x23d0b2]
-E       	chromedriver!(No symbol) [0x21db54]
-E       	chromedriver!(No symbol) [0x23a9a5]
-E       	chromedriver!(No symbol) [0x21d8a6]
-E       	chromedriver!(No symbol) [0x1f0229]
-E       	chromedriver!(No symbol) [0x1f0fe4]
-E       	chromedriver!GetHandleVerifier [0x6348b9+2785c9]
-E       	chromedriver!GetHandleVerifier [0x62feb5+273bc5]
-E       	chromedriver!GetHandleVerifier [0x64e06b+291d7b]
-E       	chromedriver!GetHandleVerifier [0x3e5cc8+299d8]
-E       	chromedriver!GetHandleVerifier [0x3ed9fd+3170d]
-E       	chromedriver!GetHandleVerifier [0x3d58c8+195d8]
-E       	chromedriver!GetHandleVerifier [0x3d5a92+197a2]
-E       	chromedriver!GetHandleVerifier [0x3bee9a+2baa]
-E       	KERNEL32!BaseThreadInitThunk [0x75755d49+19]
-E       	ntdll!RtlInitializeExceptionChain [0x7725d81b+6b]
-E       	ntdll!RtlGetAppContainerNamedObjectPath [0x7725d7a1+231]
-E       	(No symbol) [(nil)]
+E       	chromedriver!GetHandleVerifier [0xa2cdf3+10b03]
+E       	chromedriver!GetHandleVerifier [0xa2cf24+10c34]
+E       	chromedriver!(No symbol) [0x812120]
+E       	chromedriver!(No symbol) [0x85abca]
+E       	chromedriver!(No symbol) [0x85ae6b]
+E       	chromedriver!(No symbol) [0x89d0b2]
+E       	chromedriver!(No symbol) [0x87db54]
+E       	chromedriver!(No symbol) [0x89a9a5]
+E       	chromedriver!(No symbol) [0x87d8a6]
+E       	chromedriver!(No symbol) [0x850229]
+E       	chromedriver!(No symbol) [0x850fe4]
+E       	chromedriver!GetHandleVerifier [0xc948b9+2785c9]
+E       	chromedriver!GetHandleVerifier [0xc8feb5+273bc5]
+E       	chromedriver!GetHandleVerifier [0xcae06b+291d7b]
+E       	chromedriver!GetHandleVerifier [0xa45cc8+299d8]
+E       	chromedriver!GetHandleVerifier [0xa4d9fd+3170d]
+E       	chromedriver!GetHandleVerifier [0xa358c8+195d8]
+E       	chromedriver!GetHandleVerifier [0xa35a92+197a2]
+E       	chromedriver!GetHandleVerifier [0xa1ee9a+2baa]
+E       	KERNEL32!BaseThreadInitThunk [0x74e85d49+19]
+E       	ntdll!RtlInitializeExceptionChain [0x771cd81b+6b]
+E       	ntdll!RtlGetAppContainerNamedObjectPath [0x771cd7a1+231]
 
-D:\Anaconda\Lib\site-packages\selenium\webdriver\support\wait.py:146: TimeoutException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_ACC_003" time="14.097" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_NAV_001" time="15.554" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_NAV_002" time="14.150" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_NAV_003" time="13.164" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_046" time="13.051" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_047" time="13.063" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_048" time="14.651" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_049" time="13.521" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_050" time="12.762" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_051" time="13.140" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_052" time="12.997" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_053" time="13.007" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_054" time="13.834" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_055" time="16.169" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_056" time="16.368" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_057" time="16.265" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_058" time="16.022" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_059" time="15.382" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_060" time="17.925" /></testsuite></testsuites>
+D:\Anaconda\Lib\site-packages\selenium\webdriver\support\wait.py:146: TimeoutException</failure></testcase><testcase classname="tests.test_file1.TestFile1" name="test_AE_ACC_003" time="14.917" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_NAV_001" time="14.747" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_NAV_002" time="15.042" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_NAV_003" time="13.824" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_046" time="13.398" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_047" time="14.211" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_048" time="14.509" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_049" time="16.153" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_050" time="13.232" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_051" time="13.402" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_052" time="12.956" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_053" time="13.306" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_054" time="13.471" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_055" time="16.774" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_056" time="15.915" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_057" time="16.145" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_058" time="16.194" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_059" time="17.871" /><testcase classname="tests.test_file1.TestFile1" name="test_AE_UI_060" time="19.025" /></testsuite></testsuites>

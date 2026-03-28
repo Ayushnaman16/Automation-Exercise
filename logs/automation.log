@@ -1,0 +1,342 @@
+03/28/2026 07:52:27 PM:INFO:Clicking on the Login/Signup button in REG_001.
+03/28/2026 07:52:28 PM:INFO:Login to your account text is displayed.
+03/28/2026 07:52:44 PM:INFO:Clicking on the Login/Signup button in REG_002.
+03/28/2026 07:52:44 PM:INFO:Entering the signup details.
+03/28/2026 07:52:45 PM:INFO:Account information text is displayed.
+03/28/2026 07:52:48 PM:INFO:Clicking on the create account button.
+03/28/2026 07:52:49 PM:INFO:Account is created.
+03/28/2026 07:53:03 PM:INFO:Clicking on the Login/Signup button in REG_003.
+03/28/2026 07:53:04 PM:INFO:Entering the signup details.
+03/28/2026 07:53:47 PM:INFO:Clicking on the Login/Signup button in REG_001.
+03/28/2026 07:53:48 PM:INFO:Login to your account text is displayed.
+03/28/2026 07:56:12 PM:INFO:Clicking on the Login/Signup button in REG_001.
+03/28/2026 07:56:13 PM:INFO:Login to your account text is displayed.
+03/28/2026 07:56:27 PM:INFO:Clicking on the Login/Signup button in REG_002.
+03/28/2026 07:56:28 PM:INFO:Entering the signup details.
+03/28/2026 07:56:28 PM:INFO:Account information text is displayed.
+03/28/2026 07:56:52 PM:INFO:Clicking on the Login/Signup button in REG_003.
+03/28/2026 07:56:52 PM:INFO:Entering the signup details.
+03/28/2026 07:57:06 PM:INFO:Clicking on the Login/Signup Button in REG_004.
+03/28/2026 07:57:07 PM:INFO:Enter the SignUp details.
+03/28/2026 07:57:07 PM:INFO:Click on the Signup button in REG_004.
+03/28/2026 07:57:08 PM:INFO:Account information test is visible.
+03/28/2026 07:57:10 PM:INFO:All the required fields are filled.
+03/28/2026 07:57:25 PM:INFO:Clicking on the Login/Signup button in REG_005.
+03/28/2026 07:57:26 PM:INFO:Entering the signup details.
+03/28/2026 07:57:26 PM:INFO:Clicking on the signup button.
+03/28/2026 07:57:27 PM:INFO:Account information text is visible.
+03/28/2026 07:57:28 PM:INFO:The password is hidden.
+03/28/2026 07:57:57 PM:INFO:Clicking on the Login/Signup button in REG_006.
+03/28/2026 07:57:58 PM:INFO:Entering the signup details.
+03/28/2026 07:57:58 PM:INFO:Clicking the signup button.
+03/28/2026 07:57:58 PM:INFO:Account information text visibility.
+03/28/2026 07:58:22 PM:INFO:Clicking on the Login/signup button in REG_007.
+03/28/2026 07:58:22 PM:INFO:Entering the signup details.
+03/28/2026 07:58:23 PM:INFO:Clicking on the signup button.
+03/28/2026 07:58:50 PM:INFO:Clicking on the Login/Signup button in REG_008.
+03/28/2026 07:59:04 PM:INFO:Clicking on the Login/Signup button in LOGIN_001.
+03/28/2026 07:59:05 PM:INFO:Entering the login details.
+03/28/2026 07:59:05 PM:INFO:Clicking on the login button.
+03/28/2026 07:59:08 PM:INFO:User is logged in.
+03/28/2026 07:59:19 PM:INFO:Clicking on the Login/Signup button in LOGIN_002.
+03/28/2026 07:59:22 PM:INFO:Entering the login details.
+03/28/2026 07:59:22 PM:INFO:Clicking on the Login button.
+03/28/2026 07:59:23 PM:INFO:Invalid username/password is entered.
+03/28/2026 07:59:36 PM:INFO:Clicking on the Login/Signup button in LOGIN_003.
+03/28/2026 07:59:50 PM:INFO:Clicking on th Login/Signup button in LOGIN_004.
+03/28/2026 07:59:51 PM:INFO:Entering the login details.
+03/28/2026 07:59:51 PM:INFO:Clicking the login button.
+03/28/2026 07:59:53 PM:INFO:The logged in name is displayed correctly.
+03/28/2026 08:00:08 PM:INFO:Clicking the Login/Signup button in LOGIN_005.
+03/28/2026 08:00:09 PM:INFO:Entering the login details.
+03/28/2026 08:00:09 PM:INFO:Clicking the login button.
+03/28/2026 08:00:11 PM:INFO:Clicking the logout button.
+03/28/2026 08:00:12 PM:INFO:The user has been logged out.
+03/28/2026 08:00:24 PM:INFO:Clicking the Login/Signup button in LOGIN_006.
+03/28/2026 08:00:25 PM:INFO:Entering the login details.
+03/28/2026 08:00:25 PM:INFO:Clicking the login button.
+03/28/2026 08:00:28 PM:INFO:Refreshing the page.
+03/28/2026 08:00:29 PM:INFO:The page is correctly visible after refresh.
+03/28/2026 08:00:42 PM:INFO:Clicking the product button in PROD_001.
+03/28/2026 08:00:43 PM:INFO:All the products text is displayed correctly.
+03/28/2026 08:00:56 PM:INFO:Clicking the product button in PROD_002.
+03/28/2026 08:00:58 PM:INFO:All products are visible.
+03/28/2026 08:01:11 PM:INFO:Clicking the product button in PROD_003.
+03/28/2026 08:01:14 PM:INFO:Searching for product.
+03/28/2026 08:01:14 PM:INFO:Clicking the search button.
+03/28/2026 08:01:16 PM:INFO:The correct product is searched.
+03/28/2026 08:01:28 PM:INFO:Clicking the product button in PROD_004.
+03/28/2026 08:01:30 PM:INFO:Searching for an invalid product.
+03/28/2026 08:01:30 PM:INFO:Clicking the search button.
+03/28/2026 08:01:31 PM:INFO:The invalid product is not visible on the product page.
+03/28/2026 08:01:44 PM:INFO:Clicking the product button in PROD_005.
+03/28/2026 08:01:45 PM:INFO:Clicking the view product button.
+03/28/2026 08:01:47 PM:INFO:The correct product is viewed.
+03/28/2026 08:02:06 PM:INFO:Clicking the product button in PROD_006.
+03/28/2026 08:02:16 PM:INFO:All the prices are visible correctly.
+03/28/2026 08:02:29 PM:INFO:Clicking the product button in PROD_007.
+03/28/2026 08:02:31 PM:INFO:Selecting the category.
+03/28/2026 08:02:31 PM:INFO:Selecting the sub-category.
+03/28/2026 08:02:31 PM:INFO:Selecting the brand name.
+03/28/2026 08:02:31 PM:INFO:The correct products are searched according to the category.
+03/28/2026 08:02:46 PM:INFO:Clicking the product button in CART_001.
+03/28/2026 08:02:49 PM:INFO:Adding the product to the cart.
+03/28/2026 08:02:50 PM:INFO:Added to cart text box is displayed.
+03/28/2026 08:03:08 PM:INFO:Clicking the product button in CART_002.
+03/28/2026 08:03:13 PM:INFO:Adding the product to the cart.
+03/28/2026 08:03:14 PM:INFO:Added to cart test box is displayed.
+03/28/2026 08:03:14 PM:INFO:Clicking the view cart button.
+03/28/2026 08:03:17 PM:INFO:The correct product is visible in the cart.
+03/28/2026 08:03:32 PM:INFO:Clicking the product button in CART_003.
+03/28/2026 08:03:36 PM:INFO:Adding multiple quantity of the same product.
+03/28/2026 08:03:44 PM:INFO:Cart quantity is equal to the total times the product is added to the cart.
+03/28/2026 08:04:00 PM:INFO:Clicking the product button in CART_004.
+03/28/2026 08:04:01 PM:INFO:Adding the product to the cart.
+03/28/2026 08:04:03 PM:INFO:Added to cart text box is visible.
+03/28/2026 08:04:03 PM:INFO:Clicking the continue to shopping button.
+03/28/2026 08:04:03 PM:INFO:Adding another product to the cart.
+03/28/2026 08:04:05 PM:INFO:Added to cart text box is visible.
+03/28/2026 08:04:05 PM:INFO:Clicking the view cart button.
+03/28/2026 08:04:09 PM:INFO:Checking the cart product description.
+03/28/2026 08:04:09 PM:INFO:The correct product description is displayed.
+03/28/2026 08:04:35 PM:INFO:Clicking on the product button in CART_005.
+03/28/2026 08:04:37 PM:INFO:Adding the product to the cart.
+03/28/2026 08:04:38 PM:INFO:Added to cart text is displayed.
+03/28/2026 08:04:38 PM:INFO:Clicking on the view cart button.
+03/28/2026 08:04:41 PM:INFO:Deleting the item from the cart.
+03/28/2026 08:04:41 PM:INFO:Cart is empty text is displayed.
+03/28/2026 08:04:55 PM:INFO:Clicking on the product button in CART_006.
+03/28/2026 08:04:57 PM:INFO:Adding multiple items to cart and storing the count value.
+03/28/2026 08:05:03 PM:INFO:Clicking the cart button.
+03/28/2026 08:05:04 PM:INFO:Total cart value is not matching.
+03/28/2026 08:05:20 PM:INFO:Clicking on the Login/Signup button in CHECK_001.
+03/28/2026 08:05:21 PM:INFO:Entering the login details.
+03/28/2026 08:05:21 PM:INFO:Clicking the login button.
+03/28/2026 08:05:25 PM:INFO:Clicking on the product button.
+03/28/2026 08:05:27 PM:INFO:Adding the product to the cart.
+03/28/2026 08:05:29 PM:INFO:Clicking on the view cart button.
+03/28/2026 08:05:34 PM:INFO:Review order page is displayed.
+03/28/2026 08:05:48 PM:INFO:Clicking on the product button in CHECK_002.
+03/28/2026 08:05:51 PM:INFO:Adding th product to the cart.
+03/28/2026 08:05:53 PM:INFO:Clicking on the view cart button.
+03/28/2026 08:05:56 PM:INFO:Clicking on the proceed to checkout button.
+03/28/2026 08:05:56 PM:INFO:Register/Login text box is displayed.
+03/28/2026 08:06:09 PM:INFO:Clicking on the login/signup button in CHECK_003.
+03/28/2026 08:06:11 PM:INFO:Entering the login details.
+03/28/2026 08:06:12 PM:INFO:Clicking the login button.
+03/28/2026 08:06:14 PM:INFO:Clicking thr product button.
+03/28/2026 08:06:17 PM:INFO:Adding the product to the cart.
+03/28/2026 08:06:18 PM:INFO:Clicing the view cart button.
+03/28/2026 08:06:20 PM:INFO:Clicking the proceed to checkout button.
+03/28/2026 08:06:22 PM:INFO:Correct delivery address is displayed.
+03/28/2026 08:06:35 PM:INFO:Clicking on the Login/signup button in CHECK_004.
+03/28/2026 08:06:36 PM:INFO:Entering the login details.
+03/28/2026 08:06:36 PM:INFO:Clicking the login button.
+03/28/2026 08:06:38 PM:INFO:Click the product button.
+03/28/2026 08:06:40 PM:INFO:Adding the product to the cart.
+03/28/2026 08:06:41 PM:INFO:Click the view cart button.
+03/28/2026 08:06:43 PM:INFO:Click proceed to checkout button.
+03/28/2026 08:06:45 PM:INFO:Correct product information is displayed.
+03/28/2026 08:06:58 PM:INFO:Click on the Login/signup button in CHECK_005.
+03/28/2026 08:06:59 PM:INFO:Entering the login details.
+03/28/2026 08:06:59 PM:INFO:Clicking on the login button.
+03/28/2026 08:07:01 PM:INFO:Clicking the product button.
+03/28/2026 08:07:03 PM:INFO:Adding the product to the cart.
+03/28/2026 08:07:05 PM:INFO:Clicking the view cart button.
+03/28/2026 08:07:07 PM:INFO:Clicking the proceed to checkout button.
+03/28/2026 08:07:08 PM:INFO:Clicking the place order button.
+03/28/2026 08:07:08 PM:INFO:Entering the card details.
+03/28/2026 08:07:09 PM:INFO:Clicking the pay button.
+03/28/2026 08:07:11 PM:INFO:Order is placed successfully.
+03/28/2026 08:07:25 PM:INFO:Clicking the contact us button in CONTACT_001.
+03/28/2026 08:07:27 PM:INFO:Contact us text is displayed.
+03/28/2026 08:07:43 PM:INFO:Clicking the contact us button in CONTACT_002.
+03/28/2026 08:07:44 PM:INFO:Entering the contact us details.
+03/28/2026 08:07:45 PM:INFO:Clicking the submit button.
+03/28/2026 08:07:45 PM:INFO:Handling the alerts.
+03/28/2026 08:07:45 PM:INFO:Success message is displayed.
+03/28/2026 08:08:01 PM:INFO:Clicking the contact us button in CONTACT_003.
+03/28/2026 08:08:03 PM:INFO:Entering the contact us details.
+03/28/2026 08:08:03 PM:INFO:Uploading the file.
+03/28/2026 08:08:19 PM:INFO:Scrolling to the subscription field in SUB_001.
+03/28/2026 08:08:19 PM:INFO:Subscription field is displayed.
+03/28/2026 08:08:32 PM:INFO:Scrolling to the subscription field in SUB_002.
+03/28/2026 08:08:33 PM:INFO:Entering the subscription email.
+03/28/2026 08:08:34 PM:INFO:Clicking on the subscribe button.
+03/28/2026 08:08:34 PM:INFO:Subscription successful message is displayed.
+03/28/2026 08:08:47 PM:INFO:Scrolling to the subscription field in SUB_003.
+03/28/2026 08:08:47 PM:INFO:Entering invalid subscription email.
+03/28/2026 08:09:01 PM:INFO:Clicking the Login/Signup button in ACC_001.
+03/28/2026 08:09:02 PM:INFO:Entering the signup details.
+03/28/2026 08:09:02 PM:INFO:Clicking the signup button.
+03/28/2026 08:09:28 PM:INFO:Clicking the Login/signup button in ACC_002.
+03/28/2026 08:09:29 PM:INFO:Entering the Signup details.
+03/28/2026 08:09:29 PM:INFO:Clicking the signup button.
+03/28/2026 08:48:26 PM:INFO:Clicking on the Login/Signup button in REG_001.
+03/28/2026 08:48:26 PM:INFO:Login to your account text is displayed.
+03/28/2026 08:48:43 PM:INFO:Clicking on the Login/Signup button in REG_002.
+03/28/2026 08:48:43 PM:INFO:Entering the signup details.
+03/28/2026 08:48:44 PM:INFO:Account information text is displayed.
+03/28/2026 08:49:23 PM:INFO:Clicking on the Login/Signup button in REG_001.
+03/28/2026 08:49:24 PM:INFO:Login to your account text is displayed.
+03/28/2026 08:49:37 PM:INFO:Clicking on the Login/Signup button in REG_002.
+03/28/2026 08:49:38 PM:INFO:Entering the signup details.
+03/28/2026 08:49:39 PM:INFO:Account information text is displayed.
+03/28/2026 08:50:02 PM:INFO:Clicking on the Login/Signup button in REG_003.
+03/28/2026 08:50:03 PM:INFO:Entering the signup details.
+03/28/2026 08:50:18 PM:INFO:Clicking on the Login/Signup Button in REG_004.
+03/28/2026 08:50:18 PM:INFO:Enter the SignUp details.
+03/28/2026 08:50:19 PM:INFO:Click on the Signup button in REG_004.
+03/28/2026 08:50:19 PM:INFO:Account information test is visible.
+03/28/2026 08:50:22 PM:INFO:All the required fields are filled.
+03/28/2026 08:50:36 PM:INFO:Clicking on the Login/Signup button in REG_005.
+03/28/2026 08:50:36 PM:INFO:Entering the signup details.
+03/28/2026 08:50:37 PM:INFO:Clicking on the signup button.
+03/28/2026 08:50:37 PM:INFO:Account information text is visible.
+03/28/2026 08:50:39 PM:INFO:The password is hidden.
+03/28/2026 08:50:53 PM:INFO:Clicking on the Login/Signup button in REG_006.
+03/28/2026 08:50:53 PM:INFO:Entering the signup details.
+03/28/2026 08:50:54 PM:INFO:Clicking the signup button.
+03/28/2026 08:50:54 PM:INFO:Account information text visibility.
+03/28/2026 08:51:18 PM:INFO:Clicking on the Login/signup button in REG_007.
+03/28/2026 08:51:18 PM:INFO:Entering the signup details.
+03/28/2026 08:51:18 PM:INFO:Clicking on the signup button.
+03/28/2026 08:51:42 PM:INFO:Clicking on the Login/Signup button in REG_008.
+03/28/2026 08:51:57 PM:INFO:Clicking on the Login/Signup button in LOGIN_001.
+03/28/2026 08:51:57 PM:INFO:Entering the login details.
+03/28/2026 08:51:57 PM:INFO:Clicking on the login button.
+03/28/2026 08:52:04 PM:INFO:User is logged in.
+03/28/2026 08:52:17 PM:INFO:Clicking on the Login/Signup button in LOGIN_002.
+03/28/2026 08:52:18 PM:INFO:Entering the login details.
+03/28/2026 08:52:18 PM:INFO:Clicking on the Login button.
+03/28/2026 08:52:19 PM:INFO:Invalid username/password is entered.
+03/28/2026 08:52:33 PM:INFO:Clicking on the Login/Signup button in LOGIN_003.
+03/28/2026 08:52:47 PM:INFO:Clicking on th Login/Signup button in LOGIN_004.
+03/28/2026 08:52:48 PM:INFO:Entering the login details.
+03/28/2026 08:52:48 PM:INFO:Clicking the login button.
+03/28/2026 08:52:53 PM:INFO:The logged in name is displayed correctly.
+03/28/2026 08:53:07 PM:INFO:Clicking the Login/Signup button in LOGIN_005.
+03/28/2026 08:53:10 PM:INFO:Entering the login details.
+03/28/2026 08:53:11 PM:INFO:Clicking the login button.
+03/28/2026 08:53:15 PM:INFO:Clicking the logout button.
+03/28/2026 08:53:16 PM:INFO:The user has been logged out.
+03/28/2026 08:53:27 PM:INFO:Clicking the Login/Signup button in LOGIN_006.
+03/28/2026 08:53:29 PM:INFO:Entering the login details.
+03/28/2026 08:53:30 PM:INFO:Clicking the login button.
+03/28/2026 08:53:32 PM:INFO:Refreshing the page.
+03/28/2026 08:53:35 PM:INFO:The page is correctly visible after refresh.
+03/28/2026 08:53:47 PM:INFO:Clicking the product button in PROD_001.
+03/28/2026 08:53:49 PM:INFO:All the products text is displayed correctly.
+03/28/2026 08:54:01 PM:INFO:Clicking the product button in PROD_002.
+03/28/2026 08:54:03 PM:INFO:All products are visible.
+03/28/2026 08:54:16 PM:INFO:Clicking the product button in PROD_003.
+03/28/2026 08:54:17 PM:INFO:Searching for product.
+03/28/2026 08:54:18 PM:INFO:Clicking the search button.
+03/28/2026 08:54:19 PM:INFO:The correct product is searched.
+03/28/2026 08:54:32 PM:INFO:Clicking the product button in PROD_004.
+03/28/2026 08:54:33 PM:INFO:Searching for an invalid product.
+03/28/2026 08:54:34 PM:INFO:Clicking the search button.
+03/28/2026 08:54:34 PM:INFO:The invalid product is not visible on the product page.
+03/28/2026 08:54:47 PM:INFO:Clicking the product button in PROD_005.
+03/28/2026 08:54:49 PM:INFO:Clicking the view product button.
+03/28/2026 08:54:51 PM:INFO:The correct product is viewed.
+03/28/2026 08:55:04 PM:INFO:Clicking the product button in PROD_006.
+03/28/2026 08:55:06 PM:INFO:All the prices are visible correctly.
+03/28/2026 08:55:19 PM:INFO:Clicking the product button in PROD_007.
+03/28/2026 08:55:21 PM:INFO:Selecting the category.
+03/28/2026 08:55:21 PM:INFO:Selecting the sub-category.
+03/28/2026 08:55:21 PM:INFO:Selecting the brand name.
+03/28/2026 08:55:21 PM:INFO:The correct products are searched according to the category.
+03/28/2026 08:55:34 PM:INFO:Clicking the product button in CART_001.
+03/28/2026 08:55:35 PM:INFO:Adding the product to the cart.
+03/28/2026 08:55:37 PM:INFO:Added to cart text box is displayed.
+03/28/2026 08:55:51 PM:INFO:Clicking the product button in CART_002.
+03/28/2026 08:55:53 PM:INFO:Adding the product to the cart.
+03/28/2026 08:55:54 PM:INFO:Added to cart test box is displayed.
+03/28/2026 08:55:54 PM:INFO:Clicking the view cart button.
+03/28/2026 08:55:56 PM:INFO:The correct product is visible in the cart.
+03/28/2026 08:56:10 PM:INFO:Clicking the product button in CART_003.
+03/28/2026 08:56:12 PM:INFO:Adding multiple quantity of the same product.
+03/28/2026 08:56:19 PM:INFO:Cart quantity is equal to the total times the product is added to the cart.
+03/28/2026 08:56:31 PM:INFO:Clicking the product button in CART_004.
+03/28/2026 08:56:33 PM:INFO:Adding the product to the cart.
+03/28/2026 08:56:35 PM:INFO:Added to cart text box is visible.
+03/28/2026 08:56:35 PM:INFO:Clicking the continue to shopping button.
+03/28/2026 08:56:35 PM:INFO:Adding another product to the cart.
+03/28/2026 08:56:37 PM:INFO:Added to cart text box is visible.
+03/28/2026 08:56:37 PM:INFO:Clicking the view cart button.
+03/28/2026 08:56:39 PM:INFO:Checking the cart product description.
+03/28/2026 08:56:39 PM:INFO:The correct product description is displayed.
+03/28/2026 08:56:55 PM:INFO:Clicking on the product button in CART_005.
+03/28/2026 08:56:58 PM:INFO:Adding the product to the cart.
+03/28/2026 08:56:59 PM:INFO:Added to cart text is displayed.
+03/28/2026 08:56:59 PM:INFO:Clicking on the view cart button.
+03/28/2026 08:57:01 PM:INFO:Deleting the item from the cart.
+03/28/2026 08:57:02 PM:INFO:Cart is empty text is displayed.
+03/28/2026 08:57:18 PM:INFO:Clicking on the product button in CART_006.
+03/28/2026 08:57:21 PM:INFO:Adding multiple items to cart and storing the count value.
+03/28/2026 08:57:27 PM:INFO:Clicking the cart button.
+03/28/2026 08:57:28 PM:INFO:Total cart value is not matching.
+03/28/2026 08:57:42 PM:INFO:Clicking on the Login/Signup button in CHECK_001.
+03/28/2026 08:57:43 PM:INFO:Entering the login details.
+03/28/2026 08:57:43 PM:INFO:Clicking the login button.
+03/28/2026 08:57:46 PM:INFO:Clicking on the product button.
+03/28/2026 08:57:48 PM:INFO:Adding the product to the cart.
+03/28/2026 08:57:49 PM:INFO:Clicking on the view cart button.
+03/28/2026 08:57:53 PM:INFO:Review order page is displayed.
+03/28/2026 08:58:06 PM:INFO:Clicking on the product button in CHECK_002.
+03/28/2026 08:58:08 PM:INFO:Adding th product to the cart.
+03/28/2026 08:58:10 PM:INFO:Clicking on the view cart button.
+03/28/2026 08:58:12 PM:INFO:Clicking on the proceed to checkout button.
+03/28/2026 08:58:12 PM:INFO:Register/Login text box is displayed.
+03/28/2026 08:58:25 PM:INFO:Clicking on the login/signup button in CHECK_003.
+03/28/2026 08:58:26 PM:INFO:Entering the login details.
+03/28/2026 08:58:26 PM:INFO:Clicking the login button.
+03/28/2026 08:58:28 PM:INFO:Clicking thr product button.
+03/28/2026 08:58:30 PM:INFO:Adding the product to the cart.
+03/28/2026 08:58:31 PM:INFO:Clicing the view cart button.
+03/28/2026 08:58:33 PM:INFO:Clicking the proceed to checkout button.
+03/28/2026 08:58:35 PM:INFO:Correct delivery address is displayed.
+03/28/2026 08:58:48 PM:INFO:Clicking on the Login/signup button in CHECK_004.
+03/28/2026 08:58:49 PM:INFO:Entering the login details.
+03/28/2026 08:58:49 PM:INFO:Clicking the login button.
+03/28/2026 08:58:51 PM:INFO:Click the product button.
+03/28/2026 08:58:53 PM:INFO:Adding the product to the cart.
+03/28/2026 08:58:54 PM:INFO:Click the view cart button.
+03/28/2026 08:58:56 PM:INFO:Click proceed to checkout button.
+03/28/2026 08:58:57 PM:INFO:Correct product information is displayed.
+03/28/2026 08:59:11 PM:INFO:Click on the Login/signup button in CHECK_005.
+03/28/2026 08:59:11 PM:INFO:Entering the login details.
+03/28/2026 08:59:12 PM:INFO:Clicking on the login button.
+03/28/2026 08:59:14 PM:INFO:Clicking the product button.
+03/28/2026 08:59:15 PM:INFO:Adding the product to the cart.
+03/28/2026 08:59:16 PM:INFO:Clicking the view cart button.
+03/28/2026 08:59:19 PM:INFO:Clicking the proceed to checkout button.
+03/28/2026 08:59:20 PM:INFO:Clicking the place order button.
+03/28/2026 08:59:20 PM:INFO:Entering the card details.
+03/28/2026 08:59:21 PM:INFO:Clicking the pay button.
+03/28/2026 08:59:23 PM:INFO:Order is placed successfully.
+03/28/2026 08:59:36 PM:INFO:Clicking the contact us button in CONTACT_001.
+03/28/2026 08:59:37 PM:INFO:Contact us text is displayed.
+03/28/2026 08:59:50 PM:INFO:Clicking the contact us button in CONTACT_002.
+03/28/2026 08:59:52 PM:INFO:Entering the contact us details.
+03/28/2026 08:59:53 PM:INFO:Clicking the submit button.
+03/28/2026 08:59:53 PM:INFO:Handling the alerts.
+03/28/2026 08:59:53 PM:INFO:Success message is displayed.
+03/28/2026 09:00:08 PM:INFO:Clicking the contact us button in CONTACT_003.
+03/28/2026 09:00:10 PM:INFO:Entering the contact us details.
+03/28/2026 09:00:10 PM:INFO:Uploading the file.
+03/28/2026 09:00:23 PM:INFO:Scrolling to the subscription field in SUB_001.
+03/28/2026 09:00:23 PM:INFO:Subscription field is displayed.
+03/28/2026 09:00:37 PM:INFO:Scrolling to the subscription field in SUB_002.
+03/28/2026 09:00:37 PM:INFO:Entering the subscription email.
+03/28/2026 09:00:37 PM:INFO:Clicking on the subscribe button.
+03/28/2026 09:00:37 PM:INFO:Subscription successful message is displayed.
+03/28/2026 09:00:52 PM:INFO:Scrolling to the subscription field in SUB_003.
+03/28/2026 09:00:53 PM:INFO:Entering invalid subscription email.
+03/28/2026 09:01:09 PM:INFO:Clicking the Login/Signup button in ACC_001.
+03/28/2026 09:01:09 PM:INFO:Entering the signup details.
+03/28/2026 09:01:10 PM:INFO:Clicking the signup button.
+03/28/2026 09:01:34 PM:INFO:Clicking the Login/signup button in ACC_002.
+03/28/2026 09:01:34 PM:INFO:Entering the Signup details.
+03/28/2026 09:01:34 PM:INFO:Clicking the signup button.

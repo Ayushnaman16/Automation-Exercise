@@ -23,27 +23,19 @@ class LogGen:
 
     @staticmethod
     def loggen():
-        log_dir = os.path.join(os.getcwd(), "logs")
+
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        log_dir = os.path.join(base_dir, "logs")
         os.makedirs(log_dir, exist_ok=True)
 
         log_file = os.path.join(log_dir, "automation.log")
 
-        logger = logging.getLogger("automation_logger")
-        logger.setLevel(logging.DEBUG)
+        logging.basicConfig(
+            filename=log_file,
+            format='%(asctime)s:%(levelname)s:%(message)s',
+            datefmt='%m/%d/%Y %I:%M:%S %p',
+            level=logging.DEBUG,
+            force=True
+        )
 
-        # ❗ Prevent duplicate handlers
-        if not logger.handlers:
-
-            file_handler = logging.FileHandler(log_file)
-            file_handler.setLevel(logging.DEBUG)
-
-            formatter = logging.Formatter(
-                '%(asctime)s:%(levelname)s:%(message)s',
-                datefmt='%m/%d/%Y %I:%M:%S %p'
-            )
-
-            file_handler.setFormatter(formatter)
-
-            logger.addHandler(file_handler)
-
-        return logger
+        return logging.getLogger()
