@@ -1,0 +1,87 @@
+03/28/2026 02:13:15 AM:INFO:Clicking on the product button in CHECK_002.
+03/28/2026 02:13:17 AM:INFO:Adding th product to the cart.
+03/28/2026 02:13:18 AM:INFO:Clicking on the view cart button.
+03/28/2026 02:16:58 AM:INFO:Clicking on the product button in CHECK_002.
+03/28/2026 02:16:59 AM:INFO:Adding th product to the cart.
+03/28/2026 02:17:01 AM:INFO:Clicking on the view cart button.
+03/28/2026 07:54:42 PM:INFO:Clicking on the Login/Signup button in REG_001.
+03/28/2026 07:54:43 PM:INFO:Login to your account text is displayed.
+03/28/2026 07:54:57 PM:INFO:Clicking on the Login/Signup button in REG_002.
+03/28/2026 07:54:57 PM:INFO:Entering the signup details.
+03/28/2026 07:54:58 PM:INFO:Account information text is displayed.
+03/28/2026 07:55:22 PM:INFO:Clicking on the Login/Signup button in REG_003.
+03/28/2026 07:55:23 PM:INFO:Entering the signup details.
+03/29/2026 01:12:42 AM:INFO:Clicking on the Login/Signup button in REG_002.
+03/29/2026 01:12:42 AM:INFO:Entering the signup details.
+03/29/2026 01:12:43 AM:INFO:Account information text is displayed.
+03/29/2026 01:12:44 AM:INFO:Clicking on the create account button.
+03/29/2026 01:12:45 AM:INFO:Account is created.
+03/29/2026 01:14:03 AM:INFO:Clicking on the Login/Signup button in REG_006.
+03/29/2026 01:14:03 AM:INFO:Entering the signup details.
+03/29/2026 01:14:04 AM:INFO:Clicking the signup button.
+03/29/2026 01:14:04 AM:INFO:Account information text visibility.
+03/29/2026 01:15:51 AM:INFO:Clicking on the Login/Signup button in REG_006.
+03/29/2026 01:15:51 AM:INFO:Entering the signup details.
+03/29/2026 01:15:51 AM:INFO:Clicking the signup button.
+03/29/2026 01:15:51 AM:INFO:Account information text visibility.
+03/29/2026 01:15:52 AM:INFO:The date of birth is selected correctly.
+03/29/2026 01:16:12 AM:INFO:Clicking on the Login/signup button in REG_007.
+03/29/2026 01:16:12 AM:INFO:Entering the signup details.
+03/29/2026 01:16:12 AM:INFO:Clicking on the signup button.
+03/29/2026 01:16:13 AM:INFO:Account information text is visible.
+03/29/2026 01:16:30 AM:INFO:Clicking on the Login/Signup button in REG_008.
+03/29/2026 01:16:59 AM:INFO:Clicking on the Login/Signup button in REG_008.
+03/29/2026 01:17:00 AM:INFO:Entering the signup details.
+03/29/2026 01:17:00 AM:INFO:Clicking on the signup button.
+03/29/2026 01:17:00 AM:INFO:The newsletter is selected.
+03/29/2026 01:17:02 AM:INFO:Account is created successfully.
+03/29/2026 01:17:20 AM:INFO:Clicking on the Login/Signup button in REG_006.
+03/29/2026 01:17:21 AM:INFO:Entering the signup details.
+03/29/2026 01:17:21 AM:INFO:Clicking the signup button.
+03/29/2026 01:17:21 AM:INFO:Account information text visibility.
+03/29/2026 01:17:22 AM:INFO:The date of birth is selected correctly.
+03/29/2026 01:18:18 AM:INFO:Clicking the contact us button in CONTACT_003.
+03/29/2026 01:18:19 AM:INFO:Entering the contact us details.
+03/29/2026 01:18:19 AM:INFO:Uploading the file.
+03/29/2026 01:21:15 AM:INFO:Clicking the contact us button in CONTACT_003.
+03/29/2026 01:21:16 AM:INFO:Entering the contact us details.
+03/29/2026 01:21:16 AM:INFO:Uploading the file.
+03/29/2026 01:21:16 AM:INFO:Clicking the submit button.
+03/29/2026 01:21:16 AM:INFO:Handling the alert.
+03/29/2026 01:21:16 AM:INFO:Success message is displayed.
+03/29/2026 01:21:51 AM:INFO:Clicking the Login/Signup button in ACC_001.
+03/29/2026 01:21:52 AM:INFO:Entering the signup details.
+03/29/2026 01:21:52 AM:INFO:Clicking the signup button.
+03/29/2026 01:21:52 AM:INFO:Entering the data into the fields.
+03/29/2026 01:21:53 AM:INFO:Clicking the create account button.
+03/29/2026 01:21:54 AM:INFO:Clicking the home button.
+03/29/2026 01:21:56 AM:INFO:Clicking the delete account button.
+03/29/2026 01:21:56 AM:INFO:Account is deleted successfully.
+03/29/2026 01:22:37 AM:INFO:Clicking the Login/signup button in ACC_002.
+03/29/2026 01:22:38 AM:INFO:Entering the Signup details.
+03/29/2026 01:22:38 AM:INFO:Clicking the signup button.
+03/29/2026 01:22:38 AM:INFO:Entering the data in the required fields.
+03/29/2026 01:22:39 AM:INFO:Clicking on the create account button.
+03/29/2026 01:22:40 AM:INFO:Clicking the home button.
+03/29/2026 01:22:42 AM:INFO:Clicking the delete accout button.
+03/29/2026 01:22:42 AM:INFO:Clicking the login/signup button.
+03/29/2026 01:22:42 AM:INFO:Enter the login details.
+03/29/2026 01:23:59 AM:INFO:Clicking the Login/signup button in ACC_002.
+03/29/2026 01:23:59 AM:INFO:Entering the Signup details.
+03/29/2026 01:23:59 AM:INFO:Clicking the signup button.
+03/29/2026 01:24:00 AM:INFO:Entering the data in the required fields.
+03/29/2026 01:24:01 AM:INFO:Clicking on the create account button.
+03/29/2026 01:24:02 AM:INFO:Clicking the home button.
+03/29/2026 01:24:03 AM:INFO:Clicking the delete accout button.
+03/29/2026 01:24:03 AM:INFO:Clicking the login/signup button.
+03/29/2026 01:24:03 AM:INFO:Enter the login details.
+03/29/2026 01:24:04 AM:INFO:Wrong email/password text is displayed.
+03/29/2026 01:29:54 AM:INFO:Clicking the product button in CART_004.
+03/29/2026 01:29:56 AM:INFO:Adding the product to the cart.
+03/29/2026 01:29:57 AM:INFO:Added to cart text box is visible.
+03/29/2026 01:29:57 AM:INFO:Clicking the continue to shopping button.
+03/29/2026 01:29:57 AM:INFO:Adding another product to the cart.
+03/29/2026 01:29:59 AM:INFO:Added to cart text box is visible.
+03/29/2026 01:29:59 AM:INFO:Clicking the view cart button.
+03/29/2026 01:30:00 AM:INFO:Checking the cart product description.
+03/29/2026 01:30:00 AM:INFO:The correct product description is displayed.
