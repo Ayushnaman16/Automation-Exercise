@@ -1,3 +1,4 @@
+import re
 from weakref import finalize
 
 from selenium import webdriver
@@ -82,10 +83,21 @@ class CartPage:
         return WebDriverWait(self.driver,10).until(EC.visibility_of_element_located(self.quantity_text)).text
 
     def get_cart_total_value(self):
-        prices=self.driver.find_elements(*self.cart_total_value_text)
-        prices_list=[]
-        for i in prices:
-            prices_list.append(WebDriverWait(self.driver, 10).until(EC.visibility_of(i)).text)
+        # prices=self.driver.find_elements(*self.cart_total_value_text)
+        # prices_list=[]
+        # for i in prices:
+        #     prices_list.append(WebDriverWait(self.driver, 10).until(EC.visibility_of(i)).text)
+        # return prices_list
+        elements = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_all_elements_located(self.cart_total_value_text)
+        )
+
+        prices_list = []
+        for el in elements:
+            text = el.text
+            price = int(re.sub(r'\D', '', text))
+            prices_list.append(price)
+
         return prices_list
 
     def get_cart_description_text(self,product_name):

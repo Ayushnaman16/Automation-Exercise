@@ -1,3 +1,5 @@
+import re
+
 from selenium import webdriver
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.common.by import By
@@ -15,7 +17,7 @@ class ProductsPage:
     search_product_button=(By.CSS_SELECTOR,"button#submit_search")
     view_product_button=(By.XPATH,"//a[text()='View Product']")
     quantity_text=(By.XPATH,"//label[text()='Quantity:']")
-    all_prices=(By.XPATH,"//div[@class='productinfo text-center']//h2")
+    all_prices=(By.XPATH,".//div[@class='productinfo text-center']//h2")
     all_categories=(By.CSS_SELECTOR,"a[data-parent='#accordian']")
     women_categories=(By.XPATH,"//div[@id='Women']//li")
     men_categories=(By.XPATH,"//div[@id='Men']//li")
@@ -174,13 +176,13 @@ class ProductsPage:
         return products
 
     def get_item_prices(self,product_name):
-        prices=0
-        products=self.driver.find_elements(*self.all_products)
+        # prices=0
+        products=WebDriverWait(self.driver, 10).until(EC.presence_of_all_elements_located(self.all_products))
         for i in products:
-            if i.text.lower()==product_name.lower():
-                prices=int(i.find_element(*self.all_prices).text)
-                break
-        return prices
+            if product_name.lower() in i.text.lower():
+                prices=i.find_element(*self.all_prices).text
+                price = int(re.sub(r'\D', '', prices))
+                return price
 
     def product_image_visibility(self):
         products=self.driver.find_elements(*self.all_products)
