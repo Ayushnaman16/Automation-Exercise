@@ -1,5 +1,6 @@
 from jinja2.filters import select_or_reject
 from selenium import webdriver
+
 from pages.HomePage import HomePage
 from pages.CartPage import CartPage
 from pages.CheckoutPage import CheckoutPage
@@ -17,6 +18,7 @@ import os
 from utilities.Excel_Utility import readCellData,writeCellData,fillGreenColor,fillRedColor
 from utilities.PassFailReporting import update_test_result
 from utilities.CustomLogger import LogGen
+from utilities.readProperties import ReadConfig
 
 class TestFile1(Base_Test):
 
@@ -25,6 +27,10 @@ class TestFile1(Base_Test):
     # row = 2
     col = 8
 
+    user_data = ReadConfig.get_section('commonInfo1')
+    user_data1 = ReadConfig.get_section('commonInfo2')
+    product_data=ReadConfig.get_section('productInfo')
+    card_data=ReadConfig.get_section('cardInfo')
     logger=LogGen.loggen()
 
     def test_AE_REG_001(self):
@@ -53,15 +59,39 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the signup details.')
-        lp.enter_signup_details("hmm","hmm69@gmail.com")
+        # lp.enter_signup_details("hmm","hmm69@gmail.com")
+        lp.enter_signup_details(
+            self.user_data['user_name'],
+            self.user_data['user_email']
+        )
         lp.click_signup_button()
 
         self.logger.info('Account information text is displayed.')
         assert sp.account_information_text_visibility()==True
-        sp.click_title_button("mr")
-        sp.fill_all_the_fields("hmmm","hmmm","kumar","abc","Colony","Bangalore","Karnataka","Urban","112233","123456789")
-        sp.select_date("15","February","2016")
-        sp.select_country("India")
+        # sp.click_title_button("mr")
+        # sp.fill_all_the_fields("hmmm","hmmm","kumar","abc","Colony","Bangalore","Karnataka","Urban","112233","123456789")
+        # sp.select_date("15","February","2016")
+        # sp.select_country("India")
+        sp.click_title_button(self.user_data['title'])
+
+        sp.fill_all_the_fields(
+            self.user_data['password'],
+            self.user_data['first_name'],
+            self.user_data['last_name'],
+            self.user_data['company'],
+            self.user_data['address'],
+            self.user_data['address2'],
+            self.user_data['state'],
+            self.user_data['city'],
+            self.user_data['zipcode'],
+            self.user_data['mobile_number']
+        )
+
+        sp.select_date(
+            self.user_data['day'],
+            self.user_data['month'],
+            self.user_data['year']
+        )
         sp.select_newsletter()
 
         self.logger.info('Clicking on the create account button.')
@@ -92,7 +122,11 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the signup details.')
-        lp.enter_signup_details("dummy","dummy69@gmail.com")
+        # lp.enter_signup_details("dummy","dummy69@gmail.com")
+        lp.enter_signup_details(
+            self.user_data1['user_name'],
+            self.user_data1['user_email']
+        )
         lp.click_signup_button()
 
         if lp.account_already_exists_text_visibility():
@@ -112,16 +146,45 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Enter the SignUp details.')
-        lp.enter_signup_details("hmm","hmmm69@gmail.com")
+        # lp.enter_signup_details("hmm","hmmm69@gmail.com")
+        lp.enter_signup_details(
+            self.user_data['user_name'],
+            self.user_data['user_email1']
+        )
         self.logger.info('Click on the Signup button in REG_004.')
         lp.click_signup_button()
 
         self.logger.info('Account information test is visible.')
         assert sp.account_information_text_visibility()==True
-        sp.click_title_button("mr")
-        sp.fill_all_the_fields("hmmm","hmmm","kumar","abc","Colony","Bangalore","Karnataka","Urban","112233","123456789")
-        sp.select_date("15","February","2016")
-        sp.select_country("India")
+        # sp.click_title_button("mr")
+        # sp.fill_all_the_fields("hmmm","hmmm","kumar","abc","Colony","Bangalore","Karnataka","Urban","112233","123456789")
+        # sp.select_date("15","February","2016")
+        # sp.select_country("India")
+        sp.click_title_button(self.user_data['title'])
+
+        sp.fill_all_the_fields(
+            self.user_data['password'],
+            self.user_data['first_name'],
+            self.user_data['last_name'],
+            self.user_data['company'],
+            self.user_data['address'],
+            self.user_data['address2'],
+            self.user_data['state'],
+            self.user_data['city'],
+            self.user_data['zipcode'],
+            self.user_data['mobile_number']
+        )
+
+        sp.select_date(
+            self.user_data['day'],
+            self.user_data['month'],
+            self.user_data['year']
+        )
+
+        sp.select_country(
+            self.user_data['country']
+        )
+
         sp.select_newsletter()
         if sp.check_required_fields():
             self.logger.info('All the required fields are filled.')
@@ -142,15 +205,32 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the signup details.')
-        lp.enter_signup_details("hmm", "hmmmm69@gmail.com")
+        # lp.enter_signup_details("hmm", "hmmmm69@gmail.com")
+        lp.enter_signup_details(
+            self.user_data['user_name'],
+            self.user_data['user_email2']
+        )
         self.logger.info('Clicking on the signup button.')
         lp.click_signup_button()
 
         self.logger.info('Account information text is visible.')
         assert sp.account_information_text_visibility() == True
-        sp.click_title_button("mr")
-        sp.fill_all_the_fields("hmmm", "hmmm", "kumar", "abc", "Colony", "Bangalore", "Karnataka", "Urban", "112233",
-                               "123456789")
+        # sp.click_title_button("mr")
+        sp.click_title_button(self.user_data['title'])
+        # sp.fill_all_the_fields("hmmm", "hmmm", "kumar", "abc", "Colony", "Bangalore", "Karnataka", "Urban", "112233",
+        #                        "123456789")
+        sp.fill_all_the_fields(
+            self.user_data['password'],
+            self.user_data['first_name'],
+            self.user_data['last_name'],
+            self.user_data['company'],
+            self.user_data['address'],
+            self.user_data['address2'],
+            self.user_data['state'],
+            self.user_data['city'],
+            self.user_data['zipcode'],
+            self.user_data['mobile_number']
+        )
         if sp.check_password_hidden():
             self.logger.info('The password is hidden.')
             update_test_result(self.file, self.sheet, 6, self.col, 'pass')
@@ -170,19 +250,28 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the signup details.')
-        lp.enter_signup_details("hmm", "hm69@gmail.com")
+        # lp.enter_signup_details("hmm", "hm69@gmail.com")
+        lp.enter_signup_details(
+            self.user_data['user_name'],
+            self.user_data['user_email3']
+        )
         self.logger.info('Clicking the signup button.')
         lp.click_signup_button()
 
         self.logger.info('Account information text visibility.')
         assert sp.account_information_text_visibility() == True
-        sp.click_title_button("mr")
-        sp.select_date("15","February","2016")
-
+        # sp.click_title_button("mr")
+        sp.click_title_button(self.user_data['title'])
+        # sp.select_date("15","February","2016")
+        sp.select_date(
+            self.user_data['day'],
+            self.user_data['month'],
+            self.user_data['year']
+        )
         # assert sp.assert_selected_date("15")
         # assert sp.assert_selected_month('February')
         # assert sp.assert_selected_year('2016')
-        if sp.assert_selected_date_of_birth('15','February','2016'):
+        if sp.assert_selected_date_of_birth(self.user_data['day'],self.user_data['month'],self.user_data['year']):
             self.logger.info('The date of birth is selected correctly.')
             update_test_result(self.file,self.sheet,7,self.col,'pass')
             assert True
@@ -201,7 +290,11 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the signup details.')
-        lp.enter_signup_details("hmm", "hm69@gmail.com")
+        # lp.enter_signup_details("hmm", "hm69@gmail.com")
+        lp.enter_signup_details(
+            self.user_data['user_name'],
+            self.user_data['user_email']
+        )
         self.logger.info('Clicking on the signup button.')
         lp.click_signup_button()
 
@@ -224,7 +317,11 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the signup details.')
-        lp.enter_signup_details("hmm", "hm69@gmail.com")
+        # lp.enter_signup_details("hmm", "hm69@gmail.com")
+        lp.enter_signup_details(
+            self.user_data['user_name'],
+            self.user_data['user_email']
+        )
         self.logger.info('Clicking on the signup button.')
         lp.click_signup_button()
 
@@ -234,11 +331,35 @@ class TestFile1(Base_Test):
         assert sp.is_newsletter_selected()==True
 
         assert sp.account_information_text_visibility() == True
-        sp.click_title_button("mr")
-        sp.fill_all_the_fields("hmmm", "hmmm", "kumar", "abc", "Colony", "Bangalore", "Karnataka", "Urban", "112233",
-                               "123456789")
-        sp.select_date("15", "February", "2016")
-        sp.select_country("India")
+        # sp.click_title_button("mr")
+        # sp.fill_all_the_fields("hmmm", "hmmm", "kumar", "abc", "Colony", "Bangalore", "Karnataka", "Urban", "112233",
+        #                        "123456789")
+        # sp.select_date("15", "February", "2016")
+        # sp.select_country("India")
+        sp.click_title_button(self.user_data['title'])
+
+        sp.fill_all_the_fields(
+            self.user_data['password'],
+            self.user_data['first_name'],
+            self.user_data['last_name'],
+            self.user_data['company'],
+            self.user_data['address'],
+            self.user_data['address2'],
+            self.user_data['state'],
+            self.user_data['city'],
+            self.user_data['zipcode'],
+            self.user_data['mobile_number']
+        )
+
+        sp.select_date(
+            self.user_data['day'],
+            self.user_data['month'],
+            self.user_data['year']
+        )
+
+        sp.select_country(
+            self.user_data['country']
+        )
         sp.select_newsletter()
         sp.click_create_account_button()
 
@@ -264,7 +385,8 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the login details.')
-        lp.enter_login_details(email="dummy69@gmail.com",password="dummy")
+        # lp.enter_login_details(email="dummy69@gmail.com",password="dummy")
+        lp.enter_login_details(email=self.user_data1['user_email'], password=self.user_data1['password'])
         self.logger.info('Clicking on the login button.')
         lp.click_login_button()
 
@@ -286,7 +408,8 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the login details.')
-        lp.enter_login_details(email="dummy69@gmail.com",password="dumm")
+        # lp.enter_login_details(email="dummy69@gmail.com",password="dumm")
+        lp.enter_login_details(email=self.user_data1['user_email'], password=self.user_data1['password'])
         self.logger.info('Clicking on the Login button.')
         lp.click_login_button()
 
@@ -307,7 +430,7 @@ class TestFile1(Base_Test):
         self.logger.info('Clicking on the Login/Signup button in LOGIN_003.')
         hp.click_login_signup_button()
 
-        if lp.enter_login_details(email='dummy69@gmail.com') or lp.enter_login_details(password='dummy'):
+        if lp.enter_login_details(email=self.user_data1['user_email']) or lp.enter_login_details(password=self.user_data1['password']):
             if lp.get_login_pass_field_filled_status():
                 self.logger.info('Email/password field is empty is displayed.')
                 update_test_result(self.file,self.sheet,12,self.col,'pass')
@@ -326,11 +449,12 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the login details.')
-        lp.enter_login_details(email='dummy69@gmail.com',password='dummy')
+        # lp.enter_login_details(email='dummy69@gmail.com',password='dummy')
+        lp.enter_login_details(email=self.user_data1['user_email'], password=self.user_data1['password'])
         self.logger.info('Clicking the login button.')
         lp.click_login_button()
 
-        if hp.get_the_logged_in_name()=='dummy':
+        if hp.get_the_logged_in_name()==self.user_data1['user_name']:
             self.logger.info('The logged in name is displayed correctly.')
             update_test_result(self.file,self.sheet,13,self.col,'pass')
             assert True
@@ -348,7 +472,8 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the login details.')
-        lp.enter_login_details(email='dummy69@gmail.com',password='dummy')
+        # lp.enter_login_details(email='dummy69@gmail.com',password='dummy')
+        lp.enter_login_details(email=self.user_data1['user_email'], password=self.user_data1['password'])
         self.logger.info('Clicking the login button.')
         lp.click_login_button()
 
@@ -373,7 +498,8 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the login details.')
-        lp.enter_login_details(email='dummy69@gmail.com',password='dummy')
+        # lp.enter_login_details(email='dummy69@gmail.com',password='dummy')
+        lp.enter_login_details(email=self.user_data1['user_email'], password=self.user_data1['password'])
         self.logger.info('Clicking the login button.')
         lp.click_login_button()
 
@@ -435,11 +561,12 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Searching for product.')
-        pp.search_product('saree')
+        # pp.search_product('saree')
+        pp.search_product(self.product_data['product'])
         self.logger.info('Clicking the search button.')
         pp.click_search_button()
 
-        if pp.searched_product_visibility('saree'):
+        if pp.searched_product_visibility(self.product_data['product']):
             self.logger.info('The correct product is searched.')
             update_test_result(self.file,self.sheet,18,self.col,'pass')
             assert True
@@ -457,11 +584,11 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Searching for an invalid product.')
-        pp.search_invalid_product('pyjama')
+        pp.search_invalid_product(self.product_data['product1'])
         self.logger.info('Clicking the search button.')
         pp.click_search_button()
 
-        if pp.invalid_search_product_visibility('pyjama'):
+        if pp.invalid_search_product_visibility(self.product_data['product1']):
             self.logger.info('The invalid product is not visible on the product page.')
             update_test_result(self.file,self.sheet,19,self.col,'pass')
             assert True
@@ -479,7 +606,7 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Clicking the view product button.')
-        pp.click_view_product_button('Stylish Dress')
+        pp.click_view_product_button(self.product_data['product2'])
 
         if pp.quantity_text_visibility():
             self.logger.info('The correct product is viewed.')
@@ -516,11 +643,11 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Selecting the category.')
-        pp.select_category('men')
+        pp.select_category(self.product_data['category'])
         self.logger.info('Selecting the sub-category.')
-        pp.select_subcategory('tshirts')
+        pp.select_subcategory(self.product_data['subcategory'])
         self.logger.info('Selecting the brand name.')
-        pp.select_brandname('polo')
+        pp.select_brandname(self.product_data['brandname'])
 
         if pp.category_selection_visibility():
             self.logger.info('The correct products are searched according to the category.')
@@ -541,7 +668,7 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding the product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
         if pp.added_to_cart_text_visibility():
             self.logger.info('Added to cart text box is displayed.')
             update_test_result(self.file,self.sheet,23,self.col,'pass')
@@ -561,14 +688,14 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding the product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
         self.logger.info('Added to cart test box is displayed.')
         assert pp.added_to_cart_text_visibility()==True
         self.logger.info('Clicking the view cart button.')
         pp.click_view_cart_button()
         # assert 'Men Tshirt' in cp.product_description_text()
         for i in cp.product_description_text():
-            if 'Men Tshirt' in i:
+            if self.product_data['product3'] in i:
                 self.logger.info('The correct product is visible in the cart.')
                 update_test_result(self.file,self.sheet,24,self.col,'pass')
                 assert True
@@ -593,7 +720,7 @@ class TestFile1(Base_Test):
         # pp.click_view_cart_button()
 
         self.logger.info('Adding multiple quantity of the same product.')
-        cart_count=pp.add_multiple_quantity_of_a_product(3,'Men Tshirt')
+        cart_count=pp.add_multiple_quantity_of_a_product(self.product_data['count'],self.product_data['product3'])
         hp.click_cart_button()
 
         if int(cp.quantity_text_visibility())==cart_count:
@@ -615,13 +742,13 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding the product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
         self.logger.info('Added to cart text box is visible.')
         assert pp.added_to_cart_text_visibility() == True
         self.logger.info('Clicking the continue to shopping button.')
         pp.click_continue_shopping_button()
         self.logger.info('Adding another product to the cart.')
-        pp.add_to_cart_functionality('Sleeveless Dress')
+        pp.add_to_cart_functionality(self.product_data['product4'])
         self.logger.info('Added to cart text box is visible.')
         assert pp.added_to_cart_text_visibility()==True
 
@@ -640,9 +767,9 @@ class TestFile1(Base_Test):
         #         assert True
         self.logger.info('Checking the cart product description.')
         for i in cp.product_description_text():
-            if 'Men Tshirt' in i:
+            if self.product_data['product3'] in i:
                 has_tshirt = True
-            if 'Sleeveless Dress' in i:
+            if self.product_data['product4'] in i:
                 has_dress = True
 
         if has_tshirt and has_dress:
@@ -667,19 +794,19 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding the product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
         self.logger.info('Added to cart text is displayed.')
         assert pp.added_to_cart_text_visibility() == True
 
         self.logger.info('Clicking on the view cart button.')
         pp.click_view_cart_button()
         for i in cp.product_description_text():
-            if 'Men Tshirt' in i:
+            if self.product_data['product3'] in i:
                 assert True
         # assert 'Men Tshirt' in cp.product_description_text()
 
         self.logger.info('Deleting the item from the cart.')
-        cp.click_delete_item_button('Men Tshirt')
+        cp.click_delete_item_button(self.product_data['product3'])
         if cp.cart_empty_text_visibility():
             self.logger.info('Cart is empty text is displayed.')
             update_test_result(self.file,self.sheet,27,self.col,'pass')
@@ -699,12 +826,13 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding multiple items to cart and storing the count value.')
-        cart_count=pp.add_multiple_quantity_of_a_product(3,'Men Tshirt')
+        cart_count=pp.add_multiple_quantity_of_a_product(self.product_data['count'],self.product_data['product3'])
+        # print(cart_count)
+        total_cart_value = cart_count * pp.get_item_prices(self.product_data['product3'])
+        # print(total_cart_value)
         self.logger.info('Clicking the cart button.')
         hp.click_cart_button()
-
-        total_cart_value=cart_count*pp.get_item_prices('Men Tshirt')
-
+        # print(cp.get_cart_total_value())
         for i in cp.get_cart_total_value():
             if total_cart_value==i:
                 self.logger.info('Total cart value is correct.')
@@ -727,7 +855,7 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the login details.')
-        lp.enter_login_details(email='dummy69@gmail.com',password='dummy')
+        lp.enter_login_details(email=self.user_data1['user_email'],password=self.user_data1['password'])
         self.logger.info('Clicking the login button.')
         lp.click_login_button()
 
@@ -735,7 +863,7 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding the product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
         self.logger.info('Clicking on the view cart button.')
         pp.click_view_cart_button()
 
@@ -765,7 +893,7 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding th product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
         assert pp.added_to_cart_text_visibility() == True
         # pp.click_continue_shopping_button()
         self.logger.info('Clicking on the view cart button.')
@@ -797,7 +925,7 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the login details.')
-        lp.enter_login_details(email='dummy69@gmail.com', password='dummy')
+        lp.enter_login_details(email=self.user_data1['user_email'], password=self.user_data1['password'])
         self.logger.info('Clicking the login button.')
         lp.click_login_button()
 
@@ -805,10 +933,10 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding the product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
         assert pp.added_to_cart_text_visibility() == True
         # pp.click_continue_shopping_button()
-        self.logger.info('Clicing the view cart button.')
+        self.logger.info('Clicking the view cart button.')
         pp.click_view_cart_button()
 
 
@@ -837,7 +965,7 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the login details.')
-        lp.enter_login_details(email='dummy69@gmail.com',password='dummy')
+        lp.enter_login_details(email=self.user_data1['user_email'],password=self.user_data1['password'])
         self.logger.info('Clicking the login button.')
         lp.click_login_button()
 
@@ -845,7 +973,7 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding the product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
         self.logger.info('Click the view cart button.')
         pp.click_view_cart_button()
 
@@ -854,7 +982,7 @@ class TestFile1(Base_Test):
         self.logger.info('Click proceed to checkout button.')
         cp.click_proceed_to_checkout_button()
 
-        if cp.get_cart_description_text('Men Tshirt')==chp.get_product_description_text('Men Tshirt'):
+        if cp.get_cart_description_text(self.product_data['product3'])==chp.get_product_description_text(self.product_data['product3']):
             self.logger.info('Correct product information is displayed.')
             update_test_result(self.file,self.sheet,32,self.col,'pass')
             assert True
@@ -876,7 +1004,7 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the login details.')
-        lp.enter_login_details(email='dummy69@gmail.com', password='dummy')
+        lp.enter_login_details(email=self.user_data1['user_email'], password=self.user_data1['password'])
         self.logger.info('Clicking on the login button.')
         lp.click_login_button()
 
@@ -884,7 +1012,7 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding the product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
         assert pp.added_to_cart_text_visibility() == True
         # pp.click_continue_shopping_button()
         self.logger.info('Clicking the view cart button.')
@@ -898,7 +1026,7 @@ class TestFile1(Base_Test):
         chp.click_place_order_button()
 
         self.logger.info('Entering the card details.')
-        pap.enter_card_details('dummy', '12345678', '121', '11', '2030')
+        pap.enter_card_details(self.card_data['name'], self.card_data['cardnumber'], self.card_data['cvc'], self.card_data['month'], self.card_data['year'])
         self.logger.info('Clicking the pay button.')
         pap.click_pay_confirm_button()
 
@@ -939,7 +1067,7 @@ class TestFile1(Base_Test):
         assert cup.contact_us_text_visibility()==True
 
         self.logger.info('Entering the contact us details.')
-        cup.enter_contact_us_details(name='dummy',email='dummy@gmail.com',subject='Testing',message='Testing1')
+        cup.enter_contact_us_details(name=self.user_data1['user_name'],email=self.user_data1['user_email'],subject=self.user_data1['subject'],message=self.user_data1['message'])
         self.logger.info('Clicking the submit button.')
         cup.click_submit_button()
         self.logger.info('Handling the alerts.')
@@ -965,7 +1093,7 @@ class TestFile1(Base_Test):
         assert cup.contact_us_text_visibility()==True
 
         self.logger.info('Entering the contact us details.')
-        cup.enter_contact_us_details(name='dummy',email='dummy@gmail.com',subject='Testing',message='Testing1')
+        cup.enter_contact_us_details(name=self.user_data1['user_name'],email=self.user_data1['user_email'],subject=self.user_data1['subject'],message=self.user_data1['message'])
         self.logger.info('Uploading the file.')
         cup.upload_file_functionality('D:\\Automation Excercise\\testdata\\AutomationExercise_60_Unique_TestCases.xlsx')
         self.logger.info('Clicking the submit button.')
@@ -1006,7 +1134,7 @@ class TestFile1(Base_Test):
         hp.scrolling_to_subscription_field()
 
         self.logger.info('Entering the subscription email.')
-        hp.enter_subscription_email('dummy69@gmail.com')
+        hp.enter_subscription_email(self.user_data1['user_email'])
         self.logger.info('Clicking on the subscribe button.')
         hp.click_subscribe_button()
 
@@ -1026,7 +1154,7 @@ class TestFile1(Base_Test):
         self.logger.info('Scrolling to the subscription field in SUB_003.')
         hp.scrolling_to_subscription_field()
 
-        if hp.enter_invalid_subscription_email('dummy'):
+        if hp.enter_invalid_subscription_email(self.user_data1['user_name']):
             self.logger.info('Entering invalid subscription email.')
             update_test_result(self.file,self.sheet,39,self.col,'pass')
             assert True
@@ -1045,17 +1173,41 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the signup details.')
-        lp.enter_signup_details("hmm", "hmm69@gmail.com")
+        lp.enter_signup_details(self.user_data['user_name'], self.user_data['user_email'])
         self.logger.info('Clicking the signup button.')
         lp.click_signup_button()
 
         assert sp.account_information_text_visibility() == True
         self.logger.info('Entering the data into the fields.')
-        sp.click_title_button("mr")
-        sp.fill_all_the_fields("hmmm", "hmmm", "kumar", "abc", "Colony", "Bangalore", "Karnataka", "Urban", "112233",
-                               "123456789")
-        sp.select_date("15", "February", "2016")
-        sp.select_country("India")
+        # sp.click_title_button("mr")
+        # sp.fill_all_the_fields("hmmm", "hmmm", "kumar", "abc", "Colony", "Bangalore", "Karnataka", "Urban", "112233",
+        #                        "123456789")
+        # sp.select_date("15", "February", "2016")
+        # sp.select_country("India")
+        sp.click_title_button(self.user_data['title'])
+
+        sp.fill_all_the_fields(
+            self.user_data['password'],
+            self.user_data['first_name'],
+            self.user_data['last_name'],
+            self.user_data['company'],
+            self.user_data['address'],
+            self.user_data['address2'],
+            self.user_data['state'],
+            self.user_data['city'],
+            self.user_data['zipcode'],
+            self.user_data['mobile_number']
+        )
+
+        sp.select_date(
+            self.user_data['day'],
+            self.user_data['month'],
+            self.user_data['year']
+        )
+
+        sp.select_country(
+            self.user_data['country']
+        )
         sp.select_newsletter()
         self.logger.info('Clicking the create account button.')
         sp.click_create_account_button()
@@ -1086,17 +1238,41 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the Signup details.')
-        lp.enter_signup_details("hmm", "hmm69@gmail.com")
+        lp.enter_signup_details(self.user_data['user_name'], self.user_data['user_email'])
         self.logger.info('Clicking the signup button.')
         lp.click_signup_button()
 
         assert sp.account_information_text_visibility() == True
         self.logger.info('Entering the data in the required fields.')
-        sp.click_title_button("mr")
-        sp.fill_all_the_fields("hmmm", "hmmm", "kumar", "abc", "Colony", "Bangalore", "Karnataka", "Urban", "112233",
-                               "123456789")
-        sp.select_date("15", "February", "2016")
-        sp.select_country("India")
+        # sp.click_title_button("mr")
+        # sp.fill_all_the_fields("hmmm", "hmmm", "kumar", "abc", "Colony", "Bangalore", "Karnataka", "Urban", "112233",
+        #                        "123456789")
+        # sp.select_date("15", "February", "2016")
+        # sp.select_country("India")
+        sp.click_title_button(self.user_data['title'])
+
+        sp.fill_all_the_fields(
+            self.user_data['password'],
+            self.user_data['first_name'],
+            self.user_data['last_name'],
+            self.user_data['company'],
+            self.user_data['address'],
+            self.user_data['address2'],
+            self.user_data['state'],
+            self.user_data['city'],
+            self.user_data['zipcode'],
+            self.user_data['mobile_number']
+        )
+
+        sp.select_date(
+            self.user_data['day'],
+            self.user_data['month'],
+            self.user_data['year']
+        )
+
+        sp.select_country(
+            self.user_data['country']
+        )
         sp.select_newsletter()
         self.logger.info('Clicking on the create account button.')
         sp.click_create_account_button()
@@ -1114,7 +1290,7 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Enter the login details.')
-        lp.enter_login_details(email='hmm69@gmail.com',password='hmmm')
+        lp.enter_login_details(email=self.user_data['user_email'],password=self.user_data['password'])
         lp.click_login_button()
 
         if lp.wrong_email_password_text_visibility():
@@ -1135,7 +1311,7 @@ class TestFile1(Base_Test):
         hp.click_login_signup_button()
 
         self.logger.info('Entering the login details.')
-        lp.enter_login_details(email='hm69@gmail.com',password='hmm')
+        lp.enter_login_details(email=self.user_data['user_email3'],password=self.user_data['password'])
         self.logger.info('Clicking the login button.')
         lp.click_login_button()
 
@@ -1169,7 +1345,7 @@ class TestFile1(Base_Test):
         hp=HomePage(self.driver)
         tp=TestCasesPage(self.driver)
 
-        self.logger.info('Clciking the test cases button in NAV_002.')
+        self.logger.info('Clicking the test cases button in NAV_002.')
         hp.click_test_cases_button()
 
         if tp.list_of_test_cases_text_visibility():
@@ -1335,9 +1511,9 @@ class TestFile1(Base_Test):
         pp=ProductsPage(self.driver)
 
         self.logger.info('Selecting the category in UI_054.')
-        pp.select_category('Women')
+        pp.select_category(self.product_data['category1'])
         self.logger.info('Selecting the sub category.')
-        pp.select_subcategory('Dress')
+        pp.select_subcategory(self.product_data['subcategory1'])
 
         if pp.category_selection_visibility():
             self.logger.info('The category is correctly visible.')
@@ -1367,7 +1543,7 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Clicking the view product button.')
-        pp.click_view_product_button('Men Tshirt')
+        pp.click_view_product_button(self.product_data['product3'])
 
         if pp.quantity_text_visibility():
             self.logger.info('Quantity is visible.')
@@ -1386,8 +1562,8 @@ class TestFile1(Base_Test):
         self.logger.info('Clicking the product button in UI_057.')
         hp.click_product_button()
 
-        self.logger.inf('Hovering to add to cart.')
-        pp.add_to_cart_hover('Men Tshirt')
+        self.logger.info('Hovering to add to cart.')
+        pp.add_to_cart_hover(self.product_data['product3'])
 
         if pp.add_to_cart_visibility():
             self.logger.info('Add to cart is displayed.')
@@ -1407,7 +1583,7 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding the product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
 
         update_test_result(self.file, self.sheet, 59, self.col, 'pass')
         assert pp.view_cart_button_text_visibility()==True
@@ -1421,7 +1597,7 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding the product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
 
         self.logger.info('Clicking the continue to shopping button.')
         pp.click_continue_shopping_button()
@@ -1445,7 +1621,7 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding the product to the cart.')
-        pp.add_to_cart_functionality('Men Tshirt')
+        pp.add_to_cart_functionality(self.product_data['product3'])
 
         self.logger.info('Clicking the view cart button.')
         pp.click_view_cart_button()
