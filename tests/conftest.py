@@ -2,6 +2,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from utilities.ScreenshotGenerator import Screenshot
 
 @pytest.fixture(scope='function')
 def setup():
@@ -40,3 +41,9 @@ def setup():
     )
     yield driver
     driver.quit()
+
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    rep = outcome.get_result()
+    setattr(item, "rep_" + rep.when, rep)
