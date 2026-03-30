@@ -46,7 +46,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.error('Login text is not available - FAIL')
-            self.driver.save_screenshot(os.curdir+'\\screenshots\\test_AE_REG_001.png')
+            # self.driver.save_screenshot(os.curdir+'\\screenshots\\test_AE_REG_001.png')
+            # self.take_screenshot("test_AE_REG_001")
             update_test_result(self.file,self.sheet,2,self.col,'fail')
             assert False
 
@@ -106,7 +107,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.error('Account is not created.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_002.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_002.png')
+            # self.take_screenshot("test_AE_REG_002")
             update_test_result(self.file,self.sheet,3,self.col,'fail')
             sp.click_continue_button()
             hp.click_delete_account_button()
@@ -133,7 +135,8 @@ class TestFile1(Base_Test):
             update_test_result(self.file,self.sheet,4,self.col,'pass')
             assert True
         else:
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_003.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_003.png')
+            # self.take_screenshot("test_AE_REG_003")
             update_test_result(self.file,self.sheet,4,self.col,'fail')
             assert False
 
@@ -192,7 +195,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The required fields are not filled properly.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_004.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_004.png')
+            # self.take_screenshot("test_AE_REG_004")
             update_test_result(self.file,self.sheet,5,self.col,'fail')
             assert False
 
@@ -237,7 +241,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The password is not hidden.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_005.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_005.png')
+            # self.take_screenshot("test_AE_REG_005")
             update_test_result(self.file,self.sheet,6,self.col,'fail')
             assert False
 
@@ -277,7 +282,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The date of birth is not selected correctly.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_006.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_006.png')
+            # self.take_screenshot("test_AE_REG_006")
             update_test_result(self.file, self.sheet, 7, self.col, 'fail')
             assert False
 
@@ -304,7 +310,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Account information text is not visible.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_007.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_007.png')
+            # self.take_screenshot("test_AE_REG_007")
             update_test_result(self.file,self.sheet,8,self.col,'fail')
             assert False
 
@@ -371,7 +378,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Account is not created.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_008.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_REG_008.png')
+            # self.take_screenshot("test_AE_REG_008")
             update_test_result(self.file, self.sheet, 9, self.col, 'fail')
             hp.click_home_button()
             hp.click_delete_account_button()
@@ -396,7 +404,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('User is not logged in.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_001.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_001.png')
+            # self.take_screenshot("test_AE_LOGIN_001")
             update_test_result(self.file,self.sheet,10,self.col,'fail')
             assert False
 
@@ -409,7 +418,7 @@ class TestFile1(Base_Test):
 
         self.logger.info('Entering the login details.')
         # lp.enter_login_details(email="dummy69@gmail.com",password="dumm")
-        lp.enter_login_details(email=self.user_data1['user_email'], password=self.user_data1['password'])
+        lp.enter_login_details(email=self.user_data1['user_email'], password=self.user_data1['wrong_password'])
         self.logger.info('Clicking on the Login button.')
         lp.click_login_button()
 
@@ -419,7 +428,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('User has been logged in.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_002.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_002.png')
+            # self.take_screenshot("test_AE_LOGIN_002")
             update_test_result(self.file,self.sheet,11,self.col,'fail')
             assert False
 
@@ -437,7 +447,8 @@ class TestFile1(Base_Test):
                 assert True
             else:
                 self.logger.info('Email/password field is not empty.')
-                self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_003.png')
+                # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_003.png')
+                # self.take_screenshot("test_AE_LOGIN_003")
                 update_test_result(self.file,self.sheet,12,self.col,'fail')
                 assert False
 
@@ -460,7 +471,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The logged in name is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_004.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_004.png')
+            # self.take_screenshot("test_AE_LOGIN_004")
             update_test_result(self.file,self.sheet,13,self.col,'fail')
             assert False
 
@@ -486,7 +498,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The user session is still active.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_005.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_005.png')
+            # self.take_screenshot("test_AE_LOGIN_005")
             update_test_result(self.file,self.sheet,14,self.col,'fail')
             assert False
 
@@ -514,7 +527,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The correct page is not displayed after the refresh.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_006.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_LOGIN_006.png')
+            # self.take_screenshot("test_AE_LOGIN_006")
             update_test_result(self.file,self.sheet,15,self.col,'fail')
             assert False
 
@@ -532,7 +546,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('All products text is not correctly visible.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_001.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_001.png')
+            # self.take_screenshot("test_AE_PROD_001")
             update_test_result(self.file,self.sheet,16,self.col,'fail')
             assert False
 
@@ -549,7 +564,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The products are not visible correctly.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_002.png')
+            # self.take_screenshot("test_AE_PROD_002")
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_002.png')
             update_test_result(self.file,self.sheet,17,self.col,'fail')
             assert False
 
@@ -572,7 +588,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The product is not searched correctly.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_003.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_003.png')
+            # self.take_screenshot("test_AE_PROD_003")
             update_test_result(self.file,self.sheet,18,self.col,'fail')
             assert False
 
@@ -594,7 +611,8 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Th invalid product is visible on the products page.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_004.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_004.png')
+            # self.take_screenshot("test_AE_PROD_004")
             update_test_result(self.file,self.sheet,19,self.col,'fail')
             assert False
 
@@ -614,7 +632,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The correct product is not viewed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_005.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_005.png')
             update_test_result(self.file,self.sheet,20,self.col,'fail')
             assert False
 
@@ -631,7 +649,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The prices are not visible correctly.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_006.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_006.png')
             update_test_result(self.file,self.sheet,21,self.col,'fail')
             assert False
 
@@ -655,7 +673,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The correct products are not displayed according to the category.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_007.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_PROD_007.png')
             update_test_result(self.file,self.sheet,22,self.col,'fail')
             assert False
 
@@ -675,7 +693,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Added to cart text box is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_001.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_001.png')
             update_test_result(self.file,self.sheet,23,self.col,'fail')
             assert False
 
@@ -701,7 +719,7 @@ class TestFile1(Base_Test):
                 assert True
             else:
                 self.logger.info('The correct product is not visible in the cart.')
-                self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_002.png')
+                # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_002.png')
                 update_test_result(self.file,self.sheet,24,self.col,'fail')
                 assert False
 
@@ -720,7 +738,7 @@ class TestFile1(Base_Test):
         # pp.click_view_cart_button()
 
         self.logger.info('Adding multiple quantity of the same product.')
-        cart_count=pp.add_multiple_quantity_of_a_product(self.product_data['count'],self.product_data['product3'])
+        cart_count=pp.add_multiple_quantity_of_a_product(int(self.product_data['count']),self.product_data['product3'])
         hp.click_cart_button()
 
         if int(cp.quantity_text_visibility())==cart_count:
@@ -729,7 +747,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Cart quantity is not correct.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_003.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_003.png')
             update_test_result(self.file,self.sheet,25,self.col,'fail')
             assert False
 
@@ -778,7 +796,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The correct product description is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_004.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_004.png')
             update_test_result(self.file,self.sheet,26,self.col,'fail')
             assert False
 
@@ -813,7 +831,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Cart is not empty.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_005.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_005.png')
             update_test_result(self.file,self.sheet,27,self.col,'fail')
             assert False
 
@@ -826,7 +844,7 @@ class TestFile1(Base_Test):
         hp.click_product_button()
 
         self.logger.info('Adding multiple items to cart and storing the count value.')
-        cart_count=pp.add_multiple_quantity_of_a_product(self.product_data['count'],self.product_data['product3'])
+        cart_count=pp.add_multiple_quantity_of_a_product(int(self.product_data['count']),self.product_data['product3'])
         # print(cart_count)
         total_cart_value = cart_count * pp.get_item_prices(self.product_data['product3'])
         # print(total_cart_value)
@@ -840,7 +858,7 @@ class TestFile1(Base_Test):
                 assert True
             else:
                 self.logger.info('Total cart value is not matching.')
-                self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_006.png')
+                # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CART_006.png')
                 update_test_result(self.file,self.sheet,28,self.col,'fail')
                 assert False
 
@@ -877,7 +895,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Rreview order page is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CHECK_001.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CHECK_001.png')
             update_test_result(self.file, self.sheet,29, self.col, 'fail')
             assert False
 
@@ -909,7 +927,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Register/Login text box is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CHECK_002.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CHECK_002.png')
             update_test_result(self.file, self.sheet, 30, self.col, 'fail')
             assert False
 
@@ -950,7 +968,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Delivery address is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CHECK_003.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CHECK_003.png')
             update_test_result(self.file,self.sheet,31,self.col,'fail')
             assert False
 
@@ -988,7 +1006,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Product information is wrong.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CHECK_004.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CHECK_004.png')
             update_test_result(self.file,self.sheet,32,self.col,'fail')
             assert False
 
@@ -1036,7 +1054,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Order is not placed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CHECK_005.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CHECK_005.png')
             update_test_result(self.file,self.sheet,33,self.col,'fail')
             assert False
 
@@ -1053,7 +1071,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Contact us text is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CONTACT_001.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CONTACT_001.png')
             update_test_result(self.file,self.sheet,34,self.col,'fail')
             assert False
 
@@ -1079,7 +1097,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Success message is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CONTACT_002.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CONTACT_002.png')
             update_test_result(self.file,self.sheet,35,self.col,'fail')
             assert False
 
@@ -1107,7 +1125,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Success messafe is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CONTACT_003.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_CONTACT_003.png')
             update_test_result(self.file,self.sheet,36,self.col,'fail')
             assert False
 
@@ -1123,7 +1141,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Subscription field is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_SUB_001.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_SUB_001.png')
             update_test_result(self.file,self.sheet,37,self.col,'fail')
             assert False
 
@@ -1144,7 +1162,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Subscription successful message is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_SUB_002.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_SUB_002.png')
             update_test_result(self.file,self.sheet,38,self.col,'fail')
             assert False
 
@@ -1160,7 +1178,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Valid email is entered.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_SUB_003.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_SUB_003.png')
             update_test_result(self.file,self.sheet,39,self.col,'fail')
             assert False
 
@@ -1225,7 +1243,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Account is not deleted.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_ACC_001.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_ACC_001.png')
             update_test_result(self.file, self.sheet, 40, self.col, 'fail')
             assert False
 
@@ -1299,7 +1317,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Valid email/password has been entered.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_ACC_002.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_ACC_002.png')
             update_test_result(self.file,self.sheet,41,self.col,'fail')
             assert False
 
@@ -1321,7 +1339,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The email entered is valid.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_ACC_003.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_ACC_003.png')
             update_test_result(self.file,self.sheet,42,self.col,'fail')
             assert False
 
@@ -1337,7 +1355,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Home page is not active.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_NAV_001.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_NAV_001.png')
             update_test_result(self.file,self.sheet,43,self.col,'fail')
             assert False
 
@@ -1354,7 +1372,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The list of test cases are not visible.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_NAV_002.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_NAV_002.png')
             update_test_result(self.file,self.sheet,44,self.col,'fail')
             assert False
 
@@ -1373,7 +1391,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Home page is not active.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_NAV_003.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_NAV_003.png')
             update_test_result(self.file, self.sheet, 45, self.col, 'fail')
             assert False
 
@@ -1388,7 +1406,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Page title is not clickable.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_046.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_046.png')
             update_test_result(self.file, self.sheet, 47, self.col, 'fail')
             assert False
 
@@ -1404,7 +1422,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The top navigation is not properly visible.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_047.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_047.png')
             update_test_result(self.file, self.sheet, 48, self.col, 'fail')
             assert False
 
@@ -1421,7 +1439,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('All the products are not displayed properly.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_048.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_048.png')
             update_test_result(self.file, self.sheet, 49, self.col, 'fail')
             assert False
 
@@ -1438,7 +1456,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The cart is not empty.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_049.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_049.png')
             update_test_result(self.file, self.sheet, 50, self.col, 'fail')
             assert False
 
@@ -1454,7 +1472,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The footer is not visible.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_050.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_050.png')
             update_test_result(self.file, self.sheet, 51, self.col, 'fail')
             assert False
 
@@ -1470,7 +1488,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Subscription email is not visible.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_051.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_051.png')
             update_test_result(self.file, self.sheet, 52, self.col, 'fail')
             assert False
 
@@ -1486,7 +1504,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Recommended items is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_052.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_052.png')
             update_test_result(self.file, self.sheet, 53, self.col, 'fail')
             assert False
 
@@ -1502,7 +1520,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Category is not visible.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_053.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_053.png')
             update_test_result(self.file, self.sheet, 54, self.col, 'fail')
             assert False
 
@@ -1521,7 +1539,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('The category is not visible.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_054.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_054.png')
             update_test_result(self.file, self.sheet, 55, self.col, 'fail')
             assert False
 
@@ -1551,7 +1569,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Product is not loaded completely.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_056.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_056.png')
             update_test_result(self.file, self.sheet, 57, self.col, 'fail')
             assert False
 
@@ -1571,7 +1589,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Add to cart is not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_057.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_057.png')
             update_test_result(self.file, self.sheet, 58, self.col, 'fail')
             assert False
 
@@ -1608,7 +1626,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('All products are not displayed.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_059.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_059.png')
             update_test_result(self.file, self.sheet, 60, self.col, 'fail')
             assert False
 
@@ -1632,7 +1650,7 @@ class TestFile1(Base_Test):
             assert True
         else:
             self.logger.info('Product description is not displayed correctly.')
-            self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_060.png')
+            # self.driver.save_screenshot(os.curdir + '\\screenshots\\test_AE_UI_060.png')
             update_test_result(self.file, self.sheet, 61, self.col, 'fail')
             assert False
 
